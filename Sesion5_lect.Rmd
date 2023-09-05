@@ -26,9 +26,9 @@ output:
     latex_engine: lualatex
 lan: es-ES
 editor_options:
-bibliography: masterUE.bib
+bibliography: MasterUE.bib
 biblio-style: apalike
-link-citations: yes
+link-citations: true
 #csl: biomed-central.csl
 chunk_output_type: inline
 ---

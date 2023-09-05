@@ -4,13 +4,13 @@ author: "Jesús Esteban Hernández"
 date: "2/12/2022"
 output:
   html_document: 
+    
     theme: cosmo
     code_folding: show
     toc: yes
     number_sections: yes
     toc_depth: 5
     toc_float: yes
-    
   # html_notebook:
   #   # theme: readable
   #   code_folding: show
@@ -28,9 +28,9 @@ output:
 lan: es-ES
 editor_options:
   chunk_output_type: console
-bibliography: masterUE.bib
+bibliography: MasterUE.bib
 biblio-style: apalike
-link-citations: yes
+link-citations: true
 #csl: biomed-central.csl
 chunk_output_type: inline
 ---

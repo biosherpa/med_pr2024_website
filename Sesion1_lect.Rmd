@@ -1,13 +1,13 @@
 ---
 title: "Práctica 1 <br> Recopilar datos"
 author: "Jesús Esteban Hernández"
-date: "2/12/2022"
+date: "6/09/2023"
 output:
   html_document: 
     theme: cosmo
     code_folding: show
     toc: yes
-    number_sections: yes
+    number_sections: true
     toc_depth: 5
     toc_float: yes
     
@@ -27,9 +27,9 @@ output:
     latex_engine: lualatex
 lan: es-ES
 editor_options:
-bibliography: masterUE.bib
+bibliography: MasterUE.bib
 biblio-style: apalike
-link-citations: yes
+link-citations: true
 #csl: biomed-central.csl
 chunk_output_type: inline
 ---

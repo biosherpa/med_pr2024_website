@@ -10,6 +10,12 @@ website:
         text: Home
       - about.qmd
       - Sesion1_lect.Rmd
+      - Sesion2_lect.Rmd
+      - Sesion3_lect.Rmd
+
+    right: 
+      - href: index.qmd
+        text: Home2
 
 format:
   html:

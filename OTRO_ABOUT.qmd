@@ -1,5 +1,0 @@
----
-title: "Otro about"
----
-
-Ejemplo para crear otra pestaña en el menú superior.

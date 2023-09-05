@@ -1,6 +1,5 @@
 ---
-title: "Máster UE Máster en Fisioterapia Neurológica <br> Módulo III. Metodología de la investigación."
-subtitle: "Bloque Estadística Descriptiva e Inferencial. Sesión P5"
+title: "Práctica 5 <br> Bloque Estadística Descriptiva e Inferencial."
 author: "Jesús Esteban Hernández"
 date: "5/5/2023"
 output:
@@ -105,21 +104,20 @@ tocify-header {
 
 ```
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
 ::: {.column width="1800px" align="left"}
+Recuerda siempre cómo *"piensa"* R.
 
-Recuerda siempre cómo _"piensa"_ R.
-
- ![Cómo piensa R](pics/como_piensa_R.png)
+![Cómo piensa R](pics/como_piensa_R.png)
 
 # Sesión P5. Comparación de proporciones (2 grupos).
 
-En la sección anterior hemos visto cómo obtener los descriptivos básicos. En esta sesión vamos a seguir trabajando con la misma base de datos para trabajar la comparación de proporciones^[No incluiremos aquí lo relativo a test de hipótesis para contraste contra valor teórico, no porque no sea un tema importante, sino porque ya hemos visto en las sesiones teóricas y prácticas cómo evaluarlo simplemente leyendo el intervalo de confianza y no es algo que solamos hacer en los análisis, donde nos suele preocupar más la comparación. Dicho esto, si alguien tiene interés, que no dude en consultarme.]. 
+En la sección anterior hemos visto cómo obtener los descriptivos básicos.
+En esta sesión vamos a seguir trabajando con la misma base de datos para trabajar la comparación de proporciones[^1].
 
 De nuevo, hemos de cargar los datos de iam que habíamos importado y modificado en la sesión anterior.
 
@@ -129,20 +127,24 @@ No indico ruta porque estoy en el directorio de trabajo y es donde está el arch
 iam <- readRDS('iam.RDS')
 ```
 
-Si no fuese así, debería indicar la ruta entre las comillas. Por ejemplo, si estuviese en un subdirectorio del de trabajo, debería hacerlo así.
+Si no fuese así, debería indicar la ruta entre las comillas.
+Por ejemplo, si estuviese en un subdirectorio del de trabajo, debería hacerlo así.
 
 ```{r, eval=FALSE}
 readRDS('data/iam.RDS')
 
 ```
 
-Este código debería devolveros un error salvo que efectivamnte hayáis colocado el archivo en ese subdirectorio^[Recordad que siempre es mejor utilizar direccionamiento relativo (/data/iam.RDS) en vez de absoluto ('C:/Users/Usuario/Documents/SUB1/SUB2/SUB3/SUB4/SUB5/SUB6/dataiam.RDS') - atención a la dirección de la barra si copiasteis el path desde Windows] 
-
+Este código debería devolveros un error salvo que efectivamnte hayáis colocado el archivo en ese subdirectorio[^2]
 
 ## Comparación de proporciones. 2 grupos no relacionados (observaciones independientes)
 
 La base de datos iam incluye tres variables categóricas.
 
 ## Comparación de proporciones. 2 grupos no relacionados (observaciones independientes)
-
 :::
+
+[^1]: No incluiremos aquí lo relativo a test de hipótesis para contraste contra valor teórico, no porque no sea un tema importante, sino porque ya hemos visto en las sesiones teóricas y prácticas cómo evaluarlo simplemente leyendo el intervalo de confianza y no es algo que solamos hacer en los análisis, donde nos suele preocupar más la comparación.
+    Dicho esto, si alguien tiene interés, que no dude en consultarme.
+
+[^2]: Recordad que siempre es mejor utilizar direccionamiento relativo (/data/iam.RDS) en vez de absoluto ('C:/Users/Usuario/Documents/SUB1/SUB2/SUB3/SUB4/SUB5/SUB6/dataiam.RDS') - atención a la dirección de la barra si copiasteis el path desde Windows

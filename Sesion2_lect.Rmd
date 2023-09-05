@@ -1,6 +1,5 @@
 ---
-title: "Máster UE Máster en Fisioterapia Neurológica <br> Módulo III. Metodología de la investigación."
-subtitle: "Bloque Estadística Descriptiva e Inferencial. Sesión P2"
+title: "Práctica2 <br>  Bloque Estadística Descriptiva e Inferencial."
 author: "Jesús Esteban Hernández"
 date: "2/12/2022"
 output:

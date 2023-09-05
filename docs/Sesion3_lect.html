@@ -9,7 +9,7 @@
 <meta name="author" content="Jesús Esteban Hernández">
 <meta name="dcterms.date" content="2022-02-12">
 
-<title>Bioestadística - Máster UE Máster en Fisioterapia Neurológica  Módulo III. Metodología de la investigación.</title>
+<title>Bioestadística - Práctica 3  Bloque Estadística Descriptiva e Inferencial.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -155,15 +155,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./Sesion1_lect.html">
- <span class="menu-text">Máster UE Máster en Fisioterapia Neurológica <br> Módulo III. Metodología de la investigación.</span></a>
+ <span class="menu-text">Práctica 1 <br> Bloque Estadística Descriptiva e Inferencial. Sesión P1</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./Sesion2_lect.html">
- <span class="menu-text">Máster UE Máster en Fisioterapia Neurológica <br> Módulo III. Metodología de la investigación.</span></a>
+ <span class="menu-text">Práctica2 <br> Bloque Estadística Descriptiva e Inferencial.</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./Sesion3_lect.html" aria-current="page">
- <span class="menu-text">Máster UE Máster en Fisioterapia Neurológica <br> Módulo III. Metodología de la investigación.</span></a>
+ <span class="menu-text">Práctica 3 <br> Bloque Estadística Descriptiva e Inferencial.</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Sesion4_lect.html">
+ <span class="menu-text">Práctica 4 <br> Bloque Estadística Descriptiva e Inferencial.</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Sesion5_lect.html">
+ <span class="menu-text">Práctica 5 <br> Bloque Estadística Descriptiva e Inferencial.</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -209,8 +217,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Máster UE Máster en Fisioterapia Neurológica <br> Módulo III. Metodología de la investigación.</h1>
-<p class="subtitle lead">Bloque Estadística Descriptiva e Inferencial. Sesión P3</p>
+<h1 class="title">Práctica 3 <br> Bloque Estadística Descriptiva e Inferencial.</h1>
 </div>
 
 
@@ -402,69 +409,59 @@ tocify-header {
 </div>
 <p>En realidad vemos que la nueva base de datos no es exactamente la anterior. Las variables Sex, Smoke y Ami son de tipo carácter. Además no incluye la edad, pero sí la fecha de ingreso y la fecha de nacimiento.</p>
 <p>No es infrecuente que nuestros datos procedan de otro paquete estadístico o tipo de fichero. La biblioteca <em>foreign</em> incluye funciones para acometer esta tarea desde varias fuentes, incluyendo los tres software de análisis más habituales en nuestro contexto (SAS,SPSS,Stata).</p>
-
-<table style="border-collapse:collapse;border-spacing:0" class="tg">
+<table class="table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 78%">
+</colgroup>
 <thead>
-<tr>
-<th style="background-color:#5B9BD5;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;color:white">Programa</span><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;
+<tr class="header">
+<th style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+<strong>Programa</strong><br>
+&nbsp;&nbsp;&nbsp;<br>
 </th>
-<th style="background-color:#5B9BD5;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;color:white">Paquete</span>&nbsp;&nbsp;&nbsp;
-</th>
-<th style="background-color:#5B9BD5;border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;color:white">Función</span>&nbsp;&nbsp;&nbsp;
-</th>
-<th style="background-color:#5B9BD5;border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="font-weight:bold;color:white">Argumentos y opciones </span><span style="font-weight:bold;color:red">más&nbsp;&nbsp;&nbsp;frecuentes</span><span style="font-weight:bold;color:white">/predefinidas</span>&nbsp;&nbsp;&nbsp;
-</th>
+<th style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+<strong>Paquete</strong></th>
+<th style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+<strong>Función</strong></th>
+<th style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+<strong>Argumentos y opciones más&nbsp;&nbsp;&nbsp;frecuentes/predefinidas</strong></th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="background-color:#EAEFF7;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="color:black">SPSS</span>&nbsp;&nbsp;&nbsp;
-</td>
-<td style="background-color:#EAEFF7;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="font-style:italic;color:black">foreign</span>&nbsp;&nbsp;&nbsp;
-</td>
-<td style="background-color:#EAEFF7;border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="font-style:italic;color:black">read.spss()</span>&nbsp;&nbsp;&nbsp;
-</td>
-<td style="background-color:#EAEFF7;border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="color:black">read.spss(</span><span style="color:red">file,&nbsp;&nbsp;&nbsp;use.value.labels = TRUE</span><span style="color:black">,&nbsp;&nbsp;&nbsp;to.data.frame = FALSE, max.value.labels = Inf, trim.factor.names = FALSE,&nbsp;&nbsp;&nbsp;trim_values = TRUE, reencode = NA, use.missings = to.data.frame)</span>&nbsp;&nbsp;&nbsp;
-</td>
+<tr class="odd">
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+SPSS</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+foreign</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+read.spss()</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+read.spss(file,&nbsp;&nbsp;&nbsp;use.value.labels = TRUE,&nbsp;&nbsp;&nbsp;to.data.frame = FALSE, max.value.labels = Inf, trim.factor.names = FALSE,&nbsp;&nbsp;&nbsp;trim_values = TRUE, reencode = NA, use.missings = to.data.frame)</td>
 </tr>
-<tr>
-<td style="background-color:#D2DEEF;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="color:black">Stata</span>&nbsp;&nbsp;&nbsp;
-</td>
-<td style="background-color:#D2DEEF;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="font-style:italic;color:black">foreign</span>&nbsp;&nbsp;&nbsp;
-</td>
-<td style="background-color:#D2DEEF;border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="font-style:italic;color:black">read.dta()</span>&nbsp;&nbsp;&nbsp;
-</td>
-<td style="background-color:#D2DEEF;border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="color:black">read.dta(</span><span style="color:red">file</span><span style="color:black">, convert.dates = TRUE,&nbsp;&nbsp;&nbsp;convert.factors = TRUE, missing.type = FALSE, convert.underscore = FALSE,&nbsp;&nbsp;&nbsp;warn.missing.labels = TRUE)</span>&nbsp;&nbsp;&nbsp;
-</td>
+<tr class="even">
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+Stata</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+foreign</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+read.dta()</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+read.dta(file, convert.dates = TRUE,&nbsp;&nbsp;&nbsp;convert.factors = TRUE, missing.type = FALSE, convert.underscore = FALSE,&nbsp;&nbsp;&nbsp;warn.missing.labels = TRUE)</td>
 </tr>
-<tr>
-<td style="background-color:#EAEFF7;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="color:black">SAS</span>&nbsp;&nbsp;&nbsp;
-</td>
-<td style="background-color:#EAEFF7;border-color:inherit;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="font-style:italic;color:black">haven</span>&nbsp;&nbsp;&nbsp;
-</td>
-<td style="background-color:#EAEFF7;border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="font-style:italic;color:black">read_sas()</span>&nbsp;&nbsp;&nbsp;
-</td>
-<td style="background-color:#EAEFF7;border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;text-align:left;vertical-align:top;word-break:normal">
-&nbsp;&nbsp;&nbsp;<br><span style="color:black">read_sas(</span><span style="color:red">data_file</span><span style="color:black">,&nbsp;&nbsp;&nbsp;catalog_file = NULL, encoding = NULL, cols_only = NULL)</span>&nbsp;&nbsp;&nbsp;
-</td>
+<tr class="odd">
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+SAS</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+haven</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+read_sas()</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+read_sas(data_file,&nbsp;&nbsp;&nbsp;catalog_file = NULL, encoding = NULL, cols_only = NULL)</td>
 </tr>
 </tbody>
-
 </table>
 <p>También existen paquetes más específicos para importar desde alguno de ellos, como <em>readstata13</em>, que permiten opciones adicionales.</p>
 </section>

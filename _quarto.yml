@@ -15,15 +15,11 @@ website:
       - Sesion4_lect.Rmd
       - Sesion5_lect.Rmd
 
-    right: 
-      - href: index.qmd
-        text: Home2
-
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
 
-editor: visual
+editor: source
 

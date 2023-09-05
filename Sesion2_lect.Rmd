@@ -4,13 +4,13 @@ author: "Jesús Esteban Hernández"
 date: "2/12/2022"
 output:
   html_document: 
-    theme: united
+    theme: cosmo
     code_folding: show
     toc: yes
     number_sections: yes
     toc_depth: 5
     toc_float: yes
-    output_dir: docs #lo incluyo para no tener que renderizar todo y que envíe el html actualizado por separado.
+    
   # html_notebook:
   #   # theme: readable
   #   code_folding: show

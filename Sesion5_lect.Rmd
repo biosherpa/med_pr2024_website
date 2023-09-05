@@ -1,17 +1,16 @@
 ---
-title: "Práctica 5 <br> Bloque Estadística Descriptiva e Inferencial."
+title: "Práctica 5 <br> Estadística inferencia. Comparación de proporciones."
 author: "Jesús Esteban Hernández"
 date: "5/5/2023"
 output:
   html_document: 
-    theme: united
+    theme: cosmo
     code_folding: show
     toc: yes
     number_sections: yes
     toc_depth: 5
     toc_float: yes
-    output_dir: docs #lo incluyo para no tener que renderizar todo y que envíe el html actualizado por separado.
-  # html_notebook:
+    # html_notebook:
   #   # theme: readable
   #   code_folding: show
   #   toc: true

@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Prácticas de Bioestadística",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "OTRO_ABOUT.html",
+    "href": "OTRO_ABOUT.html",
+    "title": "Otro about",
+    "section": "",
+    "text": "Ejemplo para crear otra pestaña en el menú superior."
+  }
+]

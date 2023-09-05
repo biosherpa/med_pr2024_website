@@ -1,0 +1,355 @@
+---
+title: "Máster UE Máster en Fisioterapia Neurológica <br> Módulo III. Metodología de la investigación."
+subtitle: "Bloque Estadística Descriptiva e Inferencial.<br> Ejercicios Sesión 1"
+author: "Jesús Esteban Hernández"
+date: "2/12/2022"
+output:
+  html_document:
+    theme: united
+    code_folding: hide
+    toc: true #su funcionamiento parece depender de toc_float
+    # toc-title: "TOC-TITLE"
+    number_sections: true
+    toc_depth: 4
+    toc_float: true
+      # collapsed: false #bajo toc_float y como son opts quitar del principal. >default es true< y por eso false la deja desplatada desde el principio
+      # smooth_scroll: false #en vez de saltar, scrolling. default is true.
+    # highlight: tango
+  html_notebook:
+    # theme: readable
+    code_folding: hide
+    toc: true
+    toc_float: 
+      collapsed: false
+    toc_depth: 4
+    # toc-title: Table of contents #toc-title no me funciona.
+    number_sections: yes
+  # Opciones aquí https://garrettgman.github.io/rmarkdown/html_document_format
+  pdf_document:
+    toc: yes
+    toc_depth: 4
+    latex_engine: lualatex
+lan: es-ES
+editor_options:
+# bibliography: Cristina.bib
+biblio-style: apalike
+link-citations: yes
+# csl: biomed-central.csl
+chunk_output_type: inline
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Ejercicio S1.1: Directorio de trabajo.
+
+En este ejercicio practicará aspectos básicos pero importantes para entender el funcionamiento básico de R y RStudio.
+
+## Compruebe dónde está trabajando (cuál es tu directorio de trabajo).
+
+
+```{r getwd}
+getwd()
+
+```
+
+## Cambie su directorio de trabajo a otra carpeta.
+
+Recuerda usar caracteres comodín para que la ubicación sea relativa a la que usa R por defecto, que suele estar en Mis documentos. Para poder hacerlo, el directorio ha de existir. Si no lo tienes, créalo.
+
+Compruebe que ha cambiado.
+
+Obviamente el directorio puede cambiar de un equipo a otro. 
+
+ >**Importante:** No es necesario establecer el directorio de trabajo cada vez. De hecho, en general ***no es una buena práctica***, y en el futuro lo evitaremos. Sin embargo sirve para entender la ubicación del directorio de trabajo por defecto, y más importante aún, para comprender el direccionamiento relativo, conocimiento en mi opinión necesario para entender la utilidad de trabajar con proyectos en RStudio. En el futuro dejaremos de utilizar setwd. 
+ 
+
+En realidad,una vez establecido, el directorio de trabajo no cambia hasta que vuelva a ejecutar *setwd()*.
+
+De hecho, en este documento aparece porque utilizo un directorio diferente a mi directorio raíz por defecto ('~') para su construcción, y cada segmento, al ser independiente del resto, *necesita que se lo recuerde*.
+
+
+```{r setwd}
+setwd('~/Curso2dic/') # Establece el nuevo directorio de trabajo.
+getwd()# Compruebe que está en él.
+```
+
+## Cree varios objetos y guarde la imagen.
+Cree un vector numérico, un vector lógico y un vector de cadena.
+Comprueba que los elementos aparecen en tu entorno.
+
+Por defecto R guardará la imagen de tu área de trabajo en la carpeta en la que esté trabajando. Comprueba que la imagen se ha grabado en el directorio de trabajo.
+
+Cierra RStudio, salvando tu script (código), y abre de nuevo R.
+
+Al abrir RStudio de nuevo, lo más probable es que arranque en el directorio por defecto ('Home'), por lo que es probable que tengas que volver a establecer el directorio de trabajo.
+
+
+```{r}
+getwd() # Compruebas cuál es tu directorio de trabajo actual.
+setwd('~/Curso2dic/') # Cambiamos al directorio de trabajo en la que hemos guardado nuestro script.
+
+#Vector numérico
+vn<-c(1,35,27,2,45)
+#Vector lógico
+vl<-vn<25
+#Vector de cadena.
+vc<-c('Julia','Yolanda','Rosa','Juan')
+###Lo puedes ver en la ventana Environment, pero también puedes listarlos con la función ls().
+ls()
+
+#Salvamos la imagen. El nombre del archivo va entre comillas. No olvides la extensión.
+#Lo guardará en el directorio de trabajo activo. Recuerda que puedes saber cuál es con getwd().
+
+save.image('ImagenEj1.RData')
+
+# Si no utilizas un nombre...
+
+save.image()
+
+#..., R lo guarda sin nombre pero con extensión .RData. También hace esto cuando se le pide que cierre y se deja activada la opción de guardar imagen.
+# Esta imagen sin nombre es la que busca en el directorio de trabajo por defecto cuando se abre R. Si no lo encuentra abre un entorno vacío. 
+
+
+
+
+
+```
+
+## Volver al trabajo.
+
+  * ¿Sería capaz de localizar su imagen?
+  * ¿Sería capaz de cargarla en RStudio?
+  * ¿Contiene los elementos que había dejado en ella?
+
+```{r}
+#Si no estás en el directorio de trabajo en el que guardaste la imagen, desplázate a él.
+setwd('~/Curso2dic/') 
+
+#Carga tu imagen.
+# Para cargar de nuevo una imagen guardada has de utilizar la función load .
+load('ImagenEj1.RData') 
+#Recuerda que si el archivo no está en el directorio de trabajo, debes indicarle el camino (PATH) hasta el archivo. 
+#Puedes utilizar el caracter ~ para sustituir lo que R considera Home, por defecto la carpeta Documentos de tu usuario, y de esta forma llevarle a su ubicación real, o puedes cambiarte de directorio de trabajo  (setwd('PATH')) y entonces llamar al archivo de imagen.
+
+load('~/Curso2dic/ImagenEj1.RData') #en mi ordenador, esto es lo mismo que
+load('C:/Users/Usuario/Documents/Curso2dic/ImagenEj1.RData')
+
+ls()
+
+```
+
+
+
+# Ejercicio S1.2. Importación y fusión de dataframes.
+
+## Importación desde archivos csv y xlsx
+
+En este ejercicio se asume que entiende bien lo explicado anteriormente sobre el   directorio de trabajo y por tanto todo el código asume que los archivos usados están en dicho directorio por lo que no hace falta indicar el directorio para poder llamarlos.
+
+Aunque R puede importar archivos desde muchas fuentes, la realidad es que en general las bases de datos que nos llegan para analizar suelen estar en formato .xlsx (Excel), con frecuencia incumpliendo muchos de los aspectos deseables que habremos comentado en la clase presencial (ver diapositivas).
+
+En este ejercicio practicará la importación desde las dos fuentes más habituales, el archivo separado por comas (.csv) y un archivo de excel (.xlsx)
+
+Recuerde que el archivo desde el que deseas importar:
+ * Tiene una ubicación física en su ordenador o en un servidor.
+ * Los datos que contenga han de tener una estructura _importable_.
+ * Ha de introducir entre comillas (texto) el path hasta el archivo incluyendo su extensión. Solo el nombre del archivo si está en el directorio de trabajo (puede utilizar direccionamiento relativo a algún subdirectorio del directorio de trabajo).
+ 
+### Ejercicio de importación.
+
+* Importe la base de datos HIV a partir del archivo hiv.csv y del archivo hiv.xlsx.
+* Obtenga su estructura.
+
+
+```{r hiv-load}
+#Las funciones que se instalan con base siguen funcionando.
+#Asumiendo que estas ubicado en la carpeta en la que está el archivo, basta con llamarle
+hiv_csv<-read.csv("hiv.csv")              
+#Con la biblioteca xlsx.
+#Esta librería necesita tener instalada otra llamada rJava.
+library(xlsx)
+hiv_xlsx<- xlsx::read.xlsx("hiv.xlsx",sheetIndex = 1)
+#Utilizando la biblioteca readxl. Atención porque esta genera un tipo de objeto parecido al dataframe que se llama tibble.
+library(readxl) 
+hiv_xlsx_b<-readxl::read_excel('hiv.xlsx') #La llamo _b para que no pise la anterior.
+
+str(hiv_csv);str(hiv_xlsx);str(hiv_xlsx_b)
+
+```
+
+A menudo es necesario fusiona la información procedente de varios ficheros, pero para ello necesitamos alguna variable de vinculación, idealmente una variable de identificación única (Unique Key) del registro (sujeto).
+
+En el siguiente apartado le proponemos realizar una fusión para actualizar cierta información en el dataframe con el que vamos a trabajar.
+
+### Ejercicio de fusión de data.frame.
+
+
+Le informan de que la variable edad que contiene el fichero es incorrecta y le facilitan otro fichero llamado hiv_dates.csv que contiene el id (variable), la fecha de nacimiento y la fecha de la primera visita a consulta.
+
+  * Importe el fichero hiv_dates.csv.
+  * Fusione (merge) el fichero que contiene las fechas de nacimiento y las visitas con el que contiene los datos clínicos.
+  
+  _merge_ tiene muchos argumentos para poder añadir filas, columnas, con relaciones de diverso tipo entre las tablas a fusionar. Aquí solo veremos la fusión más sencilla, una unión uno a uno utilizando como campo clave la variable "id" para añadir variables desde hiv_dates a hiv. Como tiene el mismo nombre, no hace falta especificar los argumentos _by.x_ y _by.y_ .
+  
+
+```{r hiv-merge}
+hiv_dates<-read.csv('hiv_dates.csv')
+hiv_tot<-merge(hiv_csv,hiv_dates,by='id')
+```
+
+# Ejercicio S1.3. Trabajando con variables.
+## Creación y transformación de variables.
+
+Entre las tareas que seguro tendrá que acometer estarán seguro las tareas de creación y transformación de variables. En este ejercicio repasará estas tareas.
+
+
+
+*Necesitará el dataframe creado en el ejercicio anterior a partir de la fusión de hiv y hiv_dates*. Recordamos el código que necesitaría si no tuviese ese dataframe.
+
+
+```{r import-hiv}
+hiv_csv<-read.csv("hiv.csv")              
+hiv_dates<-read.csv('hiv_dates.csv')
+hiv_tot<-merge(hiv_csv,hiv_dates,by='id')
+```
+
+    En el ejercicio hemos llamado al dataframe que vamos a usar _hiv_tot_. No olvide que si ha elegido otro nombre para este dataframe, deberá usarlo de aquí en adelante. 
+
+  En lo relativo al cálculo de la edad a partir de las fechas, dado que no ha dado tiempo a tratarla con cierta profundidad en clase, junto a los ejemplos hemos incluido una breve explicación de su funcionamiento básico.
+  
+### Construya las siguientes variables.
+
+* Obtenga la edad de los pacientes en el momento de la visita en años de dos formas:
+  + Redondeo al segundo decimal.
+  + Truncada.
+* Obtenga la edad de los pacientes a día de hoy.
+* Construya una nueva variable que contenga la transformación logarítmica de los recuentos de CD4.0.
+* Sustituya los valores negativos de CD4.6 , que fueron introducidos por error, por _NA_ (missing values) y realice la misma transformación.
+* Recodifique la edad en función de los cuartiles.
+* Analice la normalidad de cualquiera de las variables de carga viral.
+
+
+#### Creación de la variable edad.
+
+El trabajo con fechas es uno de los menos agradecidos cuando trabajamos con bases de datos. Sin embargo, no es raro que haya tiempos transcurridos entre dos de ellas, por ejemplo para obtener la edad.
+
+Aunque existe un estándar internacional sobre la forma de recogerlas, la realidad es que las fechas pueden llegarnos en múltiples formatos en función del medio en el que se generen. Por ejemplo, mientras en España solemos utilizar el formato dd/mm/yyyy (día/mes/años), en Estados Unidos prefieren mm/dd/yyyy (mes/día/año). A esto hay que sumar el uso de separadores diferentes (/,-,#..), de mayúsculas o minúsculas, nombres para los meses y los días (abreviados o completos)...
+
+Es imposible trabajar en un curso como este todas las posibilidades. Son tantas que se han desarrollado paquetes especialmente dedicados a trabajar con las fechas ( _lubridate_ ) que agrega y mejora muchas de las herramientas disponibles.
+
+En los  ejercicios que verá a continuación hemos utilizado las funciones básicas porque son suficientes para la complejidad del problema en cuestión.
+
+Uno de los problemas fundamentales con las con fechas, no solo en R, es entender que la fecha que vemos es en realidad una distancia desde una fecha de referencia  que depende del programa. Por ejemplo, SPSS utiliza los segundos transcurridos desde el inicio del calendario gregoriano. Stata y R usan el 1 de enero de 1970.
+
+Puede comprobarlo en el siguiente código.
+
+```{r}
+as.numeric(Sys.Date())/365.25
+```
+
+Son los años transcurridos dese la fecha de referencia que usa R y el día actual según su ordenador.
+
+Otra forma de verlo es pedir a R que devuelva el número asignado a la fecha de referencia para el cálculo que, como era de esperar, es 0.
+
+```{r}
+as.numeric(as.Date('1970-01-01'))
+```
+
+
+En el caso de R, cuando obtenemos diferencia entre fechas en realidad estamos restando distancias, sin embargo el objeto que genera no es exactamente un vector numérico. 
+
+La resta de fechas en realidad genera un objeto de tipo difftime. Este tipo de objeto no funciona exactamente como un número y puede dar algunos problemas en análisis posteriores, por eso lo vamos a transformar usando una función de coerción de tipos _as.numeric_ . Para que el resultado no destruya la variable de edad que ya existe, aunque el enunciado del ejercicio afirma que es incorrecta y podríamos hacerlo, las vamos a llamar age2 (redondeo) y age3 (truncamiento) age_hoy (edad hoy, redondeada al segundo decimal).
+
+
+
+```{r edades}
+##Construya la variable edad el día de la visita####
+hiv_tot$age2<-as.Date(hiv_tot$fvis1)-as.Date(hiv_tot$fnac) # en días.
+
+#Redondeando los años
+hiv_tot$age2<-round(as.numeric(as.Date(hiv_tot$fvis1)-as.Date(hiv_tot$fnac))/365.25,2)
+#En años pero truncándola.
+hiv_tot$age3<-trunc(as.numeric(as.Date(hiv_tot$fvis1)-as.Date(hiv_tot$fnac))/365.25)
+```
+
+
+Si ha comprendido el funcionamiento, no le costará construir una variable que contenga la edad que tendrían los pacientes de esta base de datos a día de hoy.
+
+
+```{r edad-hoy}
+##Construya la variable edad el día de hoy####
+hiv_tot$age_hoy<-round(as.numeric(Sys.Date()-as.Date(hiv_tot$fnac))/365.25,2)
+
+```
+
+
+Como decíamos, hay funciones específicas que facilitan esta tarea, pero el ejercicio pretende que entendamos lo que realmente está sucediendo por debajo de las funciones.
+
+Aquí un ejemplo.
+
+```{r}
+head(difftime(as.Date(hiv_tot$fvis1),as.Date(hiv_tot$fnac))/365.25)
+```
+
+    Nota: as.Date solo hace falta si la variable no está en formato Date. Con frecuencia nos llegan como vector de tipo *character* y es necesario tranformarlas.
+    
+De hecho, dado que ya están en formato fecha, podemos simplificar mucho el código anterior.
+    
+```{r}
+head(difftime(hiv_tot$fvis1,hiv_tot$fnac)/365.25)
+
+```
+
+Por defecto devuelve la distancia en días, pero puede devolverla en semanas, horas, segundos, minutos... para lo que debemos utilizar el argumento *units*.
+
+Al dividirla por 365.25 (el cuarto es para contemplar los años bisiestos) obtenemos la edad en años.
+
+#### Transformación logarítmica de los recuentos de CD4.####
+
+```{r}
+
+#Transformación logarítmica cd4.0
+hiv_tot$cd4_0_log<-log(hiv_tot$cd4.0)
+#Sustitución de valores negativos en cd4.6
+
+hiv_tot[hiv_tot$cd4.6<0,'cd4.6']<-NA
+#Transformación logarítmica cd4.0
+
+hiv_tot$cd4_6_log<-log(hiv_tot$cd4.6)
+
+```
+
+### Recodifique la edad actual en función de los cuartiles.####
+
+Utilizamos los cuantiles para generar los cortes. El argumento *include.lowest* asegura que el valor más bajo de los cortes sea incluido en alguno de los intervalos.
+
+Siempre recomiendo obtener una tabla para comprobar que la recodificación ha funcionado como esperábamos, que todos los sujetos no missing están asignados a los intervalos.
+
+```{r}
+
+ageQ<-quantile(hiv_tot$age_hoy) #función que obtiene los cuantiles.
+
+hiv_tot$age_hoy_rec<-cut(hiv_tot$age_hoy,breaks=ageQ,include.lowest = TRUE)
+
+
+
+```
+
+Salve la imagen del espacio de trabajo. La necesitará en los siguientes ejercicios.
+
+
+```{r,echo=FALSE}
+save.image('ImagenSesion1.RData')
+
+```
+
+También puede exportar un archivo de datos del dataframe definitivo.
+
+```{r}
+saveRDS(hiv_tot,'hiv_tot.RDS')
+```
+
+En otro ejercicio veremos cómo cargarlo.
+

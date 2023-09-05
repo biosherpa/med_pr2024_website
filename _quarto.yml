@@ -9,7 +9,7 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - OTRO_ABOUT.qmd
+      - Sesion1_lect.Rmd
 
 format:
   html:

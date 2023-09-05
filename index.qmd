@@ -1,6 +1,6 @@
 ---
 title: "Prácticas de Bioestadística"
-subtitle: "Asignatura de Bioestadística. URJC."
+subtitle: "Asignatura de Bioestadística. Grado de Medicina. URJC."
 ---
 
 En este sitio web encontrarás lo fundamental de las prácticas de la asignatura de Bioestadística del grado de medicina de la URJC para el curso 2023-2024.

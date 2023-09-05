@@ -10,16 +10,17 @@ output:
     number_sections: yes
     toc_depth: 5
     toc_float: yes
-  html_notebook:
-    # theme: readable
-    code_folding: show
-    toc: true
-    toc_float: 
-      collapsed: false
-    toc_depth: 5
-    # toc-title: Table of contents #toc-title no me funciona.
-    number_sections: yes
-  # Opciones aquí https://garrettgman.github.io/rmarkdown/html_document_format
+    output_dir: docs #lo incluyo para no tener que renderizar todo y que envíe el html actualizado por separado.
+  # html_notebook:
+  #   # theme: readable
+  #   code_folding: show
+  #   toc: true
+  #   toc_float: 
+  #     collapsed: false
+  #   toc_depth: 5
+  #   # toc-title: Table of contents #toc-title no me funciona.
+  #   number_sections: yes
+  # # Opciones aquí https://garrettgman.github.io/rmarkdown/html_document_format
   pdf_document:
     toc: yes
     toc_depth: 5
@@ -114,7 +115,7 @@ Recuerda siempre cómo *"piensa"* R.
 
 ![Cómo piensa R](pics/como_piensa_R.png)
 
-# Sesión P5. Comparación de proporciones (2 grupos).
+# Comparación de proporciones (2 grupos).
 
 En la sección anterior hemos visto cómo obtener los descriptivos básicos.
 En esta sesión vamos a seguir trabajando con la misma base de datos para trabajar la comparación de proporciones[^1].

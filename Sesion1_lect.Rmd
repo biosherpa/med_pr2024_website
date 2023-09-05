@@ -1,5 +1,5 @@
 ---
-title: "Práctica 1 <br> Bloque Estadística Descriptiva e Inferencial. Sesión P1"
+title: "Práctica 1 <br> Recopilar datos"
 author: "Jesús Esteban Hernández"
 date: "2/12/2022"
 output:
@@ -10,16 +10,17 @@ output:
     number_sections: no
     toc_depth: 5
     toc_float: yes
-  html_notebook:
-    # theme: readable
-    code_folding: show
-    toc: true
-    toc_float: 
-      collapsed: false
-    toc_depth: 5
-    # toc-title: Table of contents #toc-title no me funciona.
-    number_sections: yes
-  # Opciones aquí https://garrettgman.github.io/rmarkdown/html_document_format
+    output_dir: docs #lo incluyo para no tener que renderizar todo y que envíe el html actualizado por separado.
+  # html_notebook:
+  #   # theme: readable
+  #   code_folding: show
+  #   toc: true
+  #   toc_float: 
+  #     collapsed: false
+  #   toc_depth: 5
+  #   # toc-title: Table of contents #toc-title no me funciona.
+  #   number_sections: yes
+  # # Opciones aquí https://garrettgman.github.io/rmarkdown/html_document_format
   pdf_document:
     toc: yes
     toc_depth: 5

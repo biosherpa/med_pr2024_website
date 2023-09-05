@@ -1,20 +1,19 @@
 ---
-title: "Máster UE Máster en Fisioterapia Neurológica <br> Módulo III. Metodología de la investigación."
-subtitle: "Bloque Estadística Descriptiva e Inferencial.<br> Notas sobre R y RStudio. Sesión 2"
+title: " Práctica de repaso <br> R y RStudio."
 author: "Jesús Esteban Hernández"
 date: "2/12/2022"
 output:
-  html_notebook:
-    # theme: readable
-    code_folding: show
-    toc: true
-    toc_float: 
-      collapsed: false
-    toc_depth: 5
-    # toc-title: Table of contents #toc-title no me funciona.
-    number_sections: yes
+  # html_notebook:
+  #   # theme: readable
+  #   code_folding: show
+  #   toc: true
+  #   toc_float: 
+  #     collapsed: false
+  #   toc_depth: 5
+  #   # toc-title: Table of contents #toc-title no me funciona.
+    # number_sections: yes
   html_document:
-    theme: united
+    theme: cosmo
     code_folding: show
     toc: true #su funcionamiento parece depender de toc_float
     # toc-title: "TOC-TITLE"
@@ -43,54 +42,69 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-Este documento recoge lo explicado sobre R y RStudio en la primera sesión. No aborda aspectos como la instalación de R y RStudio, aspectos bien cubiertos en muchos otros recursos, algunos mencionados en la bibliografía.
+Este documento recoge lo explicado sobre R y RStudio en la primera sesión.
+No aborda aspectos como la instalación de R y RStudio, aspectos bien cubiertos en muchos otros recursos, algunos mencionados en la bibliografía.
 
 # Antes de comenzar.
 
 ![Data Science WorkFlow](pics/datascience_proj.png)
 
+# Sesión 2.
 
-
-# Sesión P2.
 ## Repaso de importación de datos y obtención de descriptivos.
+
 ## Inferencia con proporciones.
-## Test de conformidad sobre valor teórico. Una proporción. 
+
+## Test de conformidad sobre valor teórico. Una proporción.
 
 ## Tablas de contingencia (test de homogeneidad de proporciones).
+
 ### 2 o más Proporciones: Grupos independientes (medidas no relacionadas).
+
 ### 2 o más Proporciones: Grupos no independientes o emparejados (medidas relacionadas)
 
 ## Inferencia con medias.
-### Una proporción: 
+
+### Una proporción:
+
 ## Tablas de contingencia (test de homogeneidad de medias).
+
 ### 2 o más medias: Grupos independientes (medidas no relacionadas).
+
 ### 2 o más medias: Grupos no independientes o emparejados (medidas relacionadas)
+
 ## Statistical Golem-Ubica tu análisis.
 
 #Sesión 3.
-## Descripción avanzada de datos. 
+## Descripción avanzada de datos.
 ### Tidyverse.
-### Paquetes gt y gtsummary
-### Gráficos con ggplot2.
-## Inferencia con medias.  ANOVA (una vía).
+### Paquetes gt y gtsummary \### Gráficos con ggplot2.
+## Inferencia con medias.
+ANOVA (una vía).
 ## Correlación y regresión lineal simple.
-## Inferencia con proporciones. Regresión logística binaria simple.
-
+## Inferencia con proporciones.
+Regresión logística binaria simple.
 
 ## Si da tiempo.
+
 ### ANOVA medidas repetidas (una vía).
+
 ### Regresión lineal múltiple.
+
 ### Regresión logística binaria múltiple.
 
 ## Manipulación avanzada.
+
 ### merge dataframe.
+
 ### pivot data long format.
 
-
-
 ## Para otras sesiones.
-### Tiempo a evento. 
+
+### Tiempo a evento.
+
 #### Análisis de supervivencia.
+
 #### Regresión de Cox.
 
 # Referencias.

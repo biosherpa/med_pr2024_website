@@ -8,12 +8,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
       - Sesion1_lect.Rmd
       - Sesion2_lect.Rmd
       - Sesion3_lect.Rmd
       - Sesion4_lect.Rmd
       - Sesion5_lect.Rmd
+      # - SesionResto_lect.Rmd
+      - about.qmd
+
 
 format:
   html:

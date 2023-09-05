@@ -5,10 +5,18 @@ subtitle: "Asignatura de Bioestadística. Grado de Medicina. URJC."
 
 En este sitio web encontrarás lo fundamental de las prácticas de la asignatura de Bioestadística del grado de medicina de la URJC para el curso 2023-2024.
 
-***ALGUNAS RECOMENDACIONES***
+**ALGUNAS RECOMENDACIONES**
 
 -   Las prácticas son secuenciales, por lo que es difícil seguir una práctica si no se revisó la práctica anterior.
 
 -   Aunque no es obligatorio, asistir a las clases prácticas es muy recomendable.
+
+*Material necesario*
+
+  * Todo lo necesario deberías encontrarlo en el aula en el que se desarrollan las prácticas.
+
+  * Si en alguna práctica hiciese falta llevar algún material adicional, se te indicaría con tiempo suficiente.
+
+
 
 

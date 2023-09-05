@@ -1,5 +1,5 @@
 ---
-title: "Práctica 4 <br> Bloque Estadística Descriptiva e Inferencial. "
+title: "Práctica 4 <br> Estadística Descriptiva. "
 author: "Jesús Esteban Hernández"
 date: "2/12/2022"
 output:

@@ -1,5 +1,5 @@
 ---
-title: "Práctica2 <br>  Bloque Estadística Descriptiva e Inferencial."
+title: "Práctica2 <br>  Introducción a R y RStudio."
 author: "Jesús Esteban Hernández"
 date: "2/12/2022"
 output:

@@ -1,5 +1,5 @@
 ---
-title: "Práctica 3 <br> Importar datos."
+title: "Práctica 3 <br> Importación y manipulación de datos."
 author: "Jesús Esteban Hernández"
 date: "2/12/2022"
 output:

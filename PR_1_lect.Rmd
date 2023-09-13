@@ -44,7 +44,7 @@ chunk_output_type: inline
     margin-left: 0px;
     right: 2px;
     margin: 2px 20px 20px 0px;
-    color: red;
+    color: purple;
     font-size: 8px;
   }
 
@@ -114,6 +114,7 @@ library(tidyverse)
 Recuerda siempre cómo *"piensa"* R.
 
 ![Cómo piensa R](pics/como_piensa_R.png)
+## Quarterly Results {.tabset}
 
 # Introducción a R+RStudio.
 

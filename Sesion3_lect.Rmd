@@ -608,3 +608,5 @@ saveRDS(object=iam,file='iam.RDS')
 
 Es importante que lo salvéis, porque lo cargaremos en la siguiente sesión.
 Así no tendremos que volver a generar todas las funciones de nuevo.
+
+:::

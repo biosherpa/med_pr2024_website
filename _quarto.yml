@@ -4,19 +4,23 @@ project:
 
 website:
   title: "Bioestadística"
-  navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - PR_0_lect.qmd
-      - PR_1_lect.qmd
-      - PR_3_lect.qmd
-      - PR_4_lect.qmd
-      - PR_5_lect.qmd
-      # - SesionResto_lect.Rmd
-      - about.qmd
-
-
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Intro"
+        contents: 
+          - PR_0_lect.qmd
+      - section: "Descriptiva"
+        contents: 
+          - PR_1_lect.qmd
+          - PR_3_lect.qmd
+      - section: "Inferencia"
+        contents: 
+          - PR_4_lect.qmd
+          - PR_5_lect.qmd
+          # - SesionResto_lect.Rmd
+          - about.qmd
 format:
   html:
     theme: cosmo

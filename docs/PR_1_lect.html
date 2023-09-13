@@ -105,11 +105,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
+  "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
+  "panel-placement": "start",
+  "type": "textbox",
   "limit": 20,
   "language": {
     "search-no-results-text": "No results",
@@ -129,59 +129,98 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Bioestadística</span>
-    </a>
-  </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-  <span class="navbar-toggler-icon"></span>
-</button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html">
- <span class="menu-text">Home</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./PR_0_lect.html">
- <span class="menu-text">Práctica 0 <br> Buenas prácticas en recopilación de datos</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./PR_1_lect.html" aria-current="page">
- <span class="menu-text">Práctica1 <br> Introducción a R y RStudio.</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./PR_3_lect.html">
- <span class="menu-text">Práctica 3 <br> Importación y manipulación de datos.</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./PR_4_lect.html">
- <span class="menu-text">Práctica 4 <br> Estadística Descriptiva.</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./PR_5_lect.html">
- <span class="menu-text">Práctica 5 <br> Estadística inferencial. Comparación de proporciones.</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./about.html">
- <span class="menu-text">About</span></a>
-  </li>  
-</ul>
-              <div id="quarto-search" class="" title="Search"></div>
-          </div> <!-- /navcollapse -->
-      </div> <!-- /container-fluid -->
-    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Práctica1 <br> Introducción a R y RStudio.</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Bioestadística</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Intro</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PR_0_lect.html" class="sidebar-item-text sidebar-link">Práctica 0 <br> Buenas prácticas en recopilación de datos</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Descriptiva</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PR_1_lect.html" class="sidebar-item-text sidebar-link active">Práctica1 <br> Introducción a R y RStudio.</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PR_3_lect.html" class="sidebar-item-text sidebar-link">Práctica 3 <br> Importación y manipulación de datos.</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">Inferencia</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PR_4_lect.html" class="sidebar-item-text sidebar-link">Práctica 4 <br> Estadística Descriptiva.</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PR_5_lect.html" class="sidebar-item-text sidebar-link">Práctica 5 <br> Estadística inferencial. Comparación de proporciones.</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./about.html" class="sidebar-item-text sidebar-link">About</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -221,7 +260,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Práctica1 <br> Introducción a R y RStudio.</h1>
+<h1 class="title d-none d-lg-block">Práctica1 <br> Introducción a R y RStudio.</h1>
 </div>
 
 
@@ -431,7 +470,10 @@ tocify-header {
 </ul>
 <p>Cómo consultar la ayuda de R:</p>
 <ul>
-<li><p>? Consulta de ayuda para funciones. <em>help(stats)</em> es lo mismo que <em>?stats</em>.</p></li>
+<li>? Consulta de ayuda para funciones.</li>
+</ul>
+<p><em>help(stats)</em> es lo mismo que <em>?stats</em>.</p>
+<ul>
 <li><p>?? busca el texto texto en las páginas de ayuda <em>??stats</em>.</p></li>
 <li><p>Si se trata de caracteres o de expresiones reservadas porque se utilizan en operaciones básicas (como <em>+</em>) o en el interior de otras funciones s (como <em>if</em> ), es necesario rodear la expresión con “” para que devuelva la ayuda.</p></li>
 <li><p>Correcto <em>help(“if”) o ?“if”</em> vs.&nbsp;Incorrecto: <em>help(if)</em> p <em>?if</em></p></li>
@@ -890,7 +932,7 @@ CT       193   4256 341.0   774</code></pre>
  $ :'data.frame':   50 obs. of  3 variables:
  $ :List of 3
   ..- attr(*, "engineVersion")= int 16
-  ..- attr(*, "pid")= int 13620
+  ..- attr(*, "pid")= int 18788
   ..- attr(*, "Rversion")=Classes 'R_system_version', 'package_version', 'numeric_version'  hidden list of 1
   ..- attr(*, "load")= chr(0) 
   ..- attr(*, "attach")= chr(0) 
@@ -914,16 +956,16 @@ CT       193   4256 341.0   774</code></pre>
 <div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(lista1<span class="sc">$</span>mi_dataframe,<span class="at">n =</span> <span class="dv">10</span>) <span class="co">#Uso head con al argumento n=10 para que solo muestre las 10 primeras filas.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     id pas    sex
-1  1001 116  Mujer
-2  1002 114 Hombre
-3  1003 121 Hombre
-4  1004 114  Mujer
-5  1005 119 Hombre
-6  1006 116  Mujer
-7  1007 123 Hombre
-8  1008 115 Hombre
-9  1009 123  Mujer
-10 1010 121 Hombre</code></pre>
+1  1001 121 Hombre
+2  1002 120  Mujer
+3  1003 121  Mujer
+4  1004 123  Mujer
+5  1005 120  Mujer
+6  1006 128 Hombre
+7  1007 111 Hombre
+8  1008 121  Mujer
+9  1009 122 Hombre
+10 1010 123  Mujer</code></pre>
 </div>
 </div>
 </section>
@@ -967,7 +1009,7 @@ CT       193   4256 341.0   774</code></pre>
     }
     else all.names
 }
-&lt;bytecode: 0x00000250e5751e50&gt;
+&lt;bytecode: 0x0000013bf002b860&gt;
 &lt;environment: namespace:base&gt;</code></pre>
 </div>
 </div>

@@ -110,7 +110,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-::: {.column width="1800px" align="left"}
+::: {.column width="2400px" align="left"}
 
 Recuerda siempre cómo *"piensa"* R.
 
@@ -609,3 +609,4 @@ saveRDS(object=iam,file='iam.RDS')
 Es importante que lo salvéis, porque lo cargaremos en la siguiente sesión.
 Así no tendremos que volver a generar todas las funciones de nuevo.
 
+:::

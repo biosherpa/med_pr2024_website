@@ -109,7 +109,6 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-::: {.column width="1800px" align="left"}
 Recuerda siempre cómo *"piensa"* R.
 
 ![Cómo piensa R](pics/como_piensa_R.png)
@@ -142,7 +141,7 @@ Este código debería devolveros un error salvo que efectivamnte hayáis colocad
 La base de datos iam incluye tres variables categóricas.
 
 ## Comparación de proporciones. 2 grupos no relacionados (observaciones independientes)
-:::
+
 
 [^1]: No incluiremos aquí lo relativo a test de hipótesis para contraste contra valor teórico, no porque no sea un tema importante, sino porque ya hemos visto en las sesiones teóricas y prácticas cómo evaluarlo simplemente leyendo el intervalo de confianza y no es algo que solamos hacer en los análisis, donde nos suele preocupar más la comparación.
     Dicho esto, si alguien tiene interés, que no dude en consultarme.

@@ -110,7 +110,6 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-::: {.column width="1800px" align="left"}
 <p style="font-weight:600; font-size:36px">
 
 Antes de comenzar...
@@ -228,6 +227,6 @@ Por último, algunos de los paquetes de R (ya veremos qué es esto) incluyen dat
 En la siguiente sesión también veremos cómo cargarlos (en este caso no es una importación) de forma sencilla.
 
 ## Referencias.
-:::
+
 
 [^1]: Con crear y editar, me estoy refiriendo a introducir y modificar los datos crudos, no a las modificaciones posteriores para construir nuevas variables mediante transformación, cálculo o recodificación

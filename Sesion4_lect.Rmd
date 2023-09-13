@@ -110,7 +110,6 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-::: {.column width="1800px" align="left"}
 Recuerda siempre cómo *"piensa"* R.
 
 ![Cómo piensa R](pics/como_piensa_R.png)
@@ -434,7 +433,7 @@ Dado que este tipo de gráficos no son necesarios para superar el bloque, si da 
 GGally::ggpairs(iam[,c('Age','bmi','Height','Weight','Sex','ami')],
                 aes(color=Sex))
 ```
-:::
+
 
 [^1]: Recordad que siempre es mejor utilizar direccionamiento relativo (/data/iam.RDS) en vez de absoluto ('C:/Users/Usuario/Documents/SUB1/SUB2/SUB3/SUB4/SUB5/SUB6/dataiam.RDS') - atención a la dirección de la barra si copiasteis el path desde Windows
 

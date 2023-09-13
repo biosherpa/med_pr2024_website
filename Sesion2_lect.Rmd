@@ -111,7 +111,6 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-::: {.column width="1800px" align="left"}
 Recuerda siempre cómo *"piensa"* R.
 
 ![Cómo piensa R](pics/como_piensa_R.png)
@@ -724,7 +723,7 @@ Esta es la explicación.
 Para terminar este apartado sobre objetos, solo queda decir que hay muchos otros tipos de objetos, algunas funciones crean sus propios objetos, aunque con frecuencia contienen uno o más de los que hemos visto.
 
 En la siguiente sesión veremos cómo importar datos para construir un dataframe y trasnformarlo para obtener nuevas variables.
-:::
+
 
 [^1]: Aunque muchas de las funciones pueden realizarse desde los menús y la barra de herramientas de RStudio, a largo plazo es mejor aprender las combinaciones de teclas más frecuentemente utilizadas
 

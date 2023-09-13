@@ -1,5 +1,5 @@
 ---
-title: "Práctica2 <br>  Introducción a R y RStudio."
+title: "Práctica1 <br>  Introducción a R y RStudio."
 author: "Jesús Esteban Hernández"
 date: "2/12/2022"
 output:
@@ -45,12 +45,12 @@ chunk_output_type: inline
     right: 2px;
     margin: 2px 20px 20px 0px;
     color: red;
-    font-size: 2px;
+    font-size: 6px;
   }
 
   .main-container {
   
-  width:1800px !important;
+  width:2400px !important;
   margin-left: 10px;
   margin-right: 10px;
   

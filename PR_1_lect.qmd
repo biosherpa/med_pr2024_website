@@ -114,7 +114,6 @@ library(tidyverse)
 Recuerda siempre cómo *"piensa"* R.
 
 ![Cómo piensa R](pics/como_piensa_R.png)
-## Quarterly Results {.tabset}
 
 # Introducción a R+RStudio.
 
@@ -122,9 +121,10 @@ Este documento no aborda aspectos como la instalación de R y RStudio, aspectos 
 
 El siguiente esquema trata de representar el flujo de trabajo habitual en cualquier proyecto de data science independientemente de su envergadura.
 
-En la preparación de cualquier trabajo de investigación en el que nosotros nos encarguemos del análisis pasaremos por todas o casi todas estas fases.
+En la preparación de cualquier trabajo de investigación en el que nosotros nos encarguemos del análisis pasaremos por todas, o casi todas, estas fases.
 
 En sentido estricto, el análisis estadístico sería el ciclo Transform-Visualise-Model, pero es imposible llegar a estas fases si no se completan los pasos anteriores.
+
 Por otro lado, sería extraño realizar un análisis para no comunicarlo, por lo que, aunque las siguientes notas no siguen exactamente este esquema, es importante tratar de pensar a qué fase corresponde todo lo que veremos en la parte práctica.
 
 ![Data Science WorkFlow](pics/datascience_proj.png){width="50%"}
@@ -215,18 +215,18 @@ Instalar la librería (*install.packages('library_name')*) significa ir a la tie
 Cargarla (*library(library_name)*) o llamarla (*require(library_name)*) sería equivalente a abrir la librería y ponerla a disposición del usuario.
 Llamar a una de las funciones que contiene sería equivalente a utilizar uno de los libros (*function_name(args,...)*), libro que puedo usar de muchas formas, siempre que conozca los los *argumentos* para poder hacerlo de la forma que yo deseo.
 
-```         
-  Nota: 
+>Nota: 
   * Aunque no son exactamente lo mismo, escuchará library, biblioteca o paquete para referirse a estas bibliotecas (traducción al español de library). 
   * Para utilizar las funciones anteriores, deberá sustituir *library_name* por el nombre de la biblioteca (*library*) que corresponda, y *function_name* por la función de dicha librería que desee utilizar.
   
-```
+
+
 
 Instalar un paquete implica copiar una serie de archivos en su ordenador en una carpeta ubicada en un subdirectorio bajo la carpeta de R, es decir es un *hecho físico constatable*.
 
-```         
-Nota: Se puede cambiar la ubicación pero de momento recomendamos que deje a R instalarlos en la ubicación por defecto que contiene todas las bibliotecas [*libraries*]). Para ver qué librerías tenemos instaladas, podemos utilizar la función *installed.packages()*. Verá que pueden estar en diferentes ubicaciones.
-```
+>      
+Nota: Se puede cambiar la ubicación pero de momento recomendamos que deje a R instalarlos en la ubicación por defecto que contiene todas las bibliotecas [*libraries*]. Para ver qué librerías tenemos instaladas, podemos utilizar la función *installed.packages()*. Verá que pueden estar en diferentes ubicaciones.
+
 
 Cargar la librería es ponerla en una zona de memoria que la hace disponible, de forma que basta con llamar a las funciones.
 En realidad se puede llamar a las funciones sin cargar la librería, pero deberemos llamarla cada vez que ejecutemos una de las funciones que contenga.
@@ -269,9 +269,9 @@ Para esto se usa la expresión *library_name::function()*.
 
 -   Es importante recordar que el código es:
 
-    -   Case-sensitive: Sensible a mayúsculas y minúsculas: Norm es diferente de norm. - Completo (multilinea): El código ha de estar completo para ser ejecutado
-    -   Coherente. () []: Los paréntesis han de ser coherentes (cada apertura su cierre).
-    -   Cuidado con caracteres reservados: =, \$, &, \*, o prohibidos ä,ü,í,...: Reservados para cometidos concretos, mejor evitar ñ y otros caracteres "extraños".
+  * Case-sensitive: Sensible a mayúsculas y minúsculas: Norm es diferente de norm. - Completo (multilinea): El código ha de estar completo para ser ejecutado
+  * Coherente. () []: Los paréntesis han de ser coherentes (cada apertura su cierre).
+  * Cuidado con caracteres reservados: =, \$, &, \*, o prohibidos ä,ü,í,...: Reservados para cometidos concretos, mejor evitar ñ y otros caracteres "extraños".
 
 ## Primer script.
 

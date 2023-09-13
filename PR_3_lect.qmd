@@ -110,7 +110,6 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-::: {.column width="2400px" align="left"}
 
 Recuerda siempre cómo *"piensa"* R.
 
@@ -137,9 +136,12 @@ Nos vamos a centrar en dos estructuras desde las que con frecuencia vamos a impo
 Una de las más sencillas si el archivo .csv está bien construido.
 Un archivo .csv no es más que un archivo de texto en el que el carácter coma (",") separa campos (variables) y el salgo de línea separa registros (individuos/elementos).
 
-```         
+>
 En realidad cualquier estructura de texto que utilice un separador de campos (variables) y de registros (líneas) es susceptible de ser importada. R tiene una función muy básica para hacerlo (*read.table*), a la que le indicamos el carácter separador de campos (",", ";","/","/tab"...), si el archivo contiene encabezado (header), una primera línea en la que se almacenan los nombres de las variables, o el carácter que utiliza como separador decimal. En realidad tiene muchos otros argumentos, pero no son necesarios para realizar importaciones sencillas. Por ejemplo, la función que utilizaremos a continuación en realida es una adaptación de esta en la que por defecto se establece que el separador de campos es la coma (","), entre otros argumentos.
-```
+
+
+
+
 
 Como comentábamos, el .csv es un formato estándar, que pesa poco y hay funciones diseñadas para leer este tipo de archivos.
 
@@ -152,9 +154,9 @@ En este caso no hace falta cargarla porque este paquete se carga al iniciar R.
 Recuerde que hay que indicar el dirección en la que está el archivo.
 En este ejemplo, que explicaremos en clase, vamos a utilizar direccionamiento relativo al directorio en el que está el archivo desde mi directorio de trabajo.
 
-```         
-Importante. La dirección de las barras de dirección (las que separan directorios y subdirectorios) en R vienen del mundo UNIX (un sistema operativo diferente a Windows), por eso las barras se inclinan hacia el lado contrario. En clase veremos alguna función que facilita copiar y pegar las direcciones desde Windows adaptándolas al lenguaje de R. Se puede hacer invirtiendo las barras que vienen de Windows, o duplicándolas manteniendo la dirección.
-```
+> Importante. 
+La dirección de las barras de dirección (las que separan directorios y subdirectorios) en R vienen del mundo UNIX (un sistema operativo diferente a Windows), por eso las barras se inclinan hacia el lado contrario. En clase veremos alguna función que facilita copiar y pegar las direcciones desde Windows adaptándolas al lenguaje de R. Se puede hacer invirtiendo las barras que vienen de Windows, o duplicándolas manteniendo la dirección.
+
 
 ```{r,echo=FALSE,include=FALSE}
 #Interesante en GlobalOptions/Rmarkdown si está puesto Evaluate chunks in Project en vez de en directory o document, el direccionamiento relativo an un subdirectorio no funciona porque busca en el que está project.  Es curioso que para los paths de las imágenes sí funciona.
@@ -405,9 +407,9 @@ También se obseva como cuando pedimos un vector de clase factor, debajo aparece
 Imaginemos que por alguna razón hubiésemos querido que el primer nivel se asignase a Mujer aunque el código que se asignó en la base de datos original fue el superior (1).
 Podemos obligar a que la función lea los niveles como nosotros deseemos usando el argumento levels.
 
-```         
+>
 La posición que asignemos a los niveles tendrá importancia en la construcción de los modelos, puesto que, aunque se puede cambiar, la comparación que se establece por defecto es contra el nivel más bajo, que funcionará como nivel de referencia. 
-```
+
 
 ```{r}
 sex3<-factor(x,levels=c("1","0"))
@@ -528,9 +530,9 @@ Podemos ver cómo ha ido la recodificación construyendo una tabla de contingenc
 table(nse_f_rec,nse_f)
 ```
 
-```         
-Es importante que esta acción ya no puede ser deshecha, no podemos volver al vector que los tenía separados si no contamos con el original o versiones previas del que hemos destruido al generar el nuevo.
-```
+>
+Es importante tener en cuenta que esta acción ya no puede ser deshecha; no podemos volver al vector que los tenía separados si no contamos con el original o versiones previas del que hemos destruido al generar el nuevo.
+
 
 Por un método parecido podemos reordenar los niveles para que el nivel de referencia sea el que deseemos.
 
@@ -609,5 +611,5 @@ saveRDS(object=iam,file='iam.RDS')
 Es importante que lo salvéis, porque lo cargaremos en la siguiente sesión.
 Así no tendremos que volver a generar todas las funciones de nuevo.
 
-:::
+
 

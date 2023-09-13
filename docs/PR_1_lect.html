@@ -144,18 +144,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./PR_1_lect.html" aria-current="page">
- <span class="menu-text">Práctica1 <br> Introducción a R y RStudio.</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./PR_0_lect.html">
  <span class="menu-text">Práctica 0 <br> Buenas prácticas en recopilación de datos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./PR_1_lect.html" aria-current="page">
+ <span class="menu-text">Práctica1 <br> Introducción a R y RStudio.</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./PR_3_lect.html">
@@ -259,7 +259,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     margin-left: 0px;
     right: 2px;
     margin: 2px 20px 20px 0px;
-    color: purple;
+    color: red;
     font-size: 8px;
   }
 
@@ -884,7 +884,7 @@ CT       193   4256 341.0   774</code></pre>
  $ :'data.frame':   50 obs. of  3 variables:
  $ :List of 3
   ..- attr(*, "engineVersion")= int 16
-  ..- attr(*, "pid")= int 1992
+  ..- attr(*, "pid")= int 20948
   ..- attr(*, "Rversion")=Classes 'R_system_version', 'package_version', 'numeric_version'  hidden list of 1
   ..- attr(*, "load")= chr(0) 
   ..- attr(*, "attach")= chr(0) 
@@ -908,16 +908,16 @@ CT       193   4256 341.0   774</code></pre>
 <div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(lista1<span class="sc">$</span>mi_dataframe,<span class="at">n =</span> <span class="dv">10</span>) <span class="co">#Uso head con al argumento n=10 para que solo muestre las 10 primeras filas.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     id pas    sex
-1  1001 113 Hombre
-2  1002 113 Hombre
-3  1003 115 Hombre
-4  1004 118  Mujer
-5  1005 111  Mujer
-6  1006 117  Mujer
-7  1007 118  Mujer
-8  1008 125  Mujer
-9  1009 116 Hombre
-10 1010 131  Mujer</code></pre>
+1  1001 117 Hombre
+2  1002 118 Hombre
+3  1003 123  Mujer
+4  1004 118 Hombre
+5  1005 115 Hombre
+6  1006 113 Hombre
+7  1007 127  Mujer
+8  1008 127 Hombre
+9  1009 124 Hombre
+10 1010 118 Hombre</code></pre>
 </div>
 </div>
 </section>
@@ -961,7 +961,7 @@ CT       193   4256 341.0   774</code></pre>
     }
     else all.names
 }
-&lt;bytecode: 0x0000018ab604e800&gt;
+&lt;bytecode: 0x000001db7196d7f0&gt;
 &lt;environment: namespace:base&gt;</code></pre>
 </div>
 </div>

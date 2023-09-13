@@ -5,14 +5,14 @@ project:
 website:
   title: "Bioestadística"
   navbar:
-    right:
+    left:
       - href: index.qmd
         text: Home
-      - PR_1_lect.Rmd
-      - PR_0_lect.Rmd
-      - PR_3_lect.Rmd
-      - PR_4_lect.Rmd
-      - PR_5_lect.Rmd
+      - PR_0_lect.qmd
+      - PR_1_lect.qmd
+      - PR_3_lect.qmd
+      - PR_4_lect.qmd
+      - PR_5_lect.qmd
       # - SesionResto_lect.Rmd
       - about.qmd
 

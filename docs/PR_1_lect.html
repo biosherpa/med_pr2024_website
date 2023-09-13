@@ -258,7 +258,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     width:300px;
     margin-left: 0px;
     right: 2px;
-    margin: 2px 20px 20px 0px;
+    margin: 2px 2px 2px 0px;
     color: red;
     font-size: 8px;
   }
@@ -270,6 +270,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   margin-right: 10px;
   
 }
+
 
 body {
   font-size: 14pt;
@@ -445,7 +446,7 @@ tocify-header {
 </blockquote>
 <p>Instalar un paquete implica copiar una serie de archivos en su ordenador en una carpeta ubicada en un subdirectorio bajo la carpeta de R, es decir es un <em>hecho físico constatable</em>.</p>
 <blockquote class="blockquote">
-<p>Nota: Se puede cambiar la ubicación pero de momento recomendamos que deje a R instalarlos en la ubicación por defecto que contiene todas las bibliotecas [<em>libraries</em>]). Para ver qué librerías tenemos instaladas, podemos utilizar la función <em>installed.packages()</em>. Verá que pueden estar en diferentes ubicaciones.</p>
+<p>Nota: Se puede cambiar la ubicación pero de momento recomendamos que deje a R instalarlos en la ubicación por defecto que contiene todas las bibliotecas [<em>libraries</em>]. Para ver qué librerías tenemos instaladas, podemos utilizar la función <em>installed.packages()</em>. Verá que pueden estar en diferentes ubicaciones.</p>
 </blockquote>
 <p>Cargar la librería es ponerla en una zona de memoria que la hace disponible, de forma que basta con llamar a las funciones. En realidad se puede llamar a las funciones sin cargar la librería, pero deberemos llamarla cada vez que ejecutemos una de las funciones que contenga. Para esto se usa la expresión <em>library_name::function()</em>.</p>
 </section>
@@ -889,7 +890,7 @@ CT       193   4256 341.0   774</code></pre>
  $ :'data.frame':   50 obs. of  3 variables:
  $ :List of 3
   ..- attr(*, "engineVersion")= int 16
-  ..- attr(*, "pid")= int 12044
+  ..- attr(*, "pid")= int 13620
   ..- attr(*, "Rversion")=Classes 'R_system_version', 'package_version', 'numeric_version'  hidden list of 1
   ..- attr(*, "load")= chr(0) 
   ..- attr(*, "attach")= chr(0) 
@@ -914,15 +915,15 @@ CT       193   4256 341.0   774</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>     id pas    sex
 1  1001 116  Mujer
-2  1002 121  Mujer
-3  1003 119 Hombre
-4  1004 120  Mujer
-5  1005 120 Hombre
-6  1006 110 Hombre
-7  1007 120 Hombre
-8  1008 116 Hombre
-9  1009 115  Mujer
-10 1010 120  Mujer</code></pre>
+2  1002 114 Hombre
+3  1003 121 Hombre
+4  1004 114  Mujer
+5  1005 119 Hombre
+6  1006 116  Mujer
+7  1007 123 Hombre
+8  1008 115 Hombre
+9  1009 123  Mujer
+10 1010 121 Hombre</code></pre>
 </div>
 </div>
 </section>
@@ -966,7 +967,7 @@ CT       193   4256 341.0   774</code></pre>
     }
     else all.names
 }
-&lt;bytecode: 0x000001e3be800840&gt;
+&lt;bytecode: 0x00000250e5751e50&gt;
 &lt;environment: namespace:base&gt;</code></pre>
 </div>
 </div>

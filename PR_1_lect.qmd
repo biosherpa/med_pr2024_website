@@ -4,7 +4,7 @@ author: "Jesús Esteban Hernández"
 date: "2/12/2022"
 output:
   html_document: 
-    
+    page-layout: full
     theme: cosmo
     code_folding: show
     toc: yes
@@ -32,7 +32,6 @@ bibliography: MasterUE.bib
 biblio-style: apalike
 link-citations: true
 #csl: biomed-central.csl
-chunk_output_type: inline
 ---
 
 ```{css label=css, echo = FALSE}
@@ -43,7 +42,7 @@ chunk_output_type: inline
     width:300px;
     margin-left: 0px;
     right: 2px;
-    margin: 2px 20px 20px 0px;
+    margin: 2px 2px 2px 0px;
     color: red;
     font-size: 8px;
   }
@@ -55,6 +54,7 @@ chunk_output_type: inline
   margin-right: 10px;
   
 }
+
 
 body {
   font-size: 14pt;
@@ -199,7 +199,8 @@ Para detalles sobre la instalación y otros aspectos básicos, [este recurso](ht
 Cómo consultar la ayuda de R:
 
 -   ? Consulta de ayuda para funciones.
-    *help(stats)* es lo mismo que *?stats*.
+
+  *help(stats)* es lo mismo que *?stats*.
 
 -   ?? busca el texto texto en las páginas de ayuda *??stats*.
 
@@ -282,6 +283,7 @@ Se abrirá una pestaña que señala el nuevo script.
 Pegue en ese espacio el siguiente código:
 
 ```{r}
+
 library(car) # carga la biblioteca, que a su vez permite el acceso a los datos de una base de datos sobre coches.
 summary(cars) # resume los datos.
 plot(cars) # construye un gráfico con los datos.

@@ -20,6 +20,7 @@ website:
 format:
   html:
     theme: unity
+    theme: cosmo
     css: styles.css
     toc: true
 

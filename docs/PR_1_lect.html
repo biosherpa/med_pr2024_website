@@ -144,29 +144,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav navbar-nav-scroll me-auto">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Sesion1_lect.html">
- <span class="menu-text">Práctica 0 <br> Buenas prácticas en recopilación de datos</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./Sesion2_lect.html" aria-current="page">
+    <a class="nav-link active" href="./PR_1_lect.html" aria-current="page">
  <span class="menu-text">Práctica2 <br> Introducción a R y RStudio.</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Sesion3_lect.html">
+    <a class="nav-link" href="./PR_0_lect.html">
+ <span class="menu-text">Práctica 0 <br> Buenas prácticas en recopilación de datos</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./PR_3_lect.html">
  <span class="menu-text">Práctica 3 <br> Importación y manipulación de datos.</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Sesion4_lect.html">
+    <a class="nav-link" href="./PR_4_lect.html">
  <span class="menu-text">Práctica 4 <br> Estadística Descriptiva.</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Sesion5_lect.html">
+    <a class="nav-link" href="./PR_5_lect.html">
  <span class="menu-text">Práctica 5 <br> Estadística inferencial. Comparación de proporciones.</span></a>
   </li>  
   <li class="nav-item">
@@ -516,7 +516,7 @@ Attaching package: 'car'</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cars) <span class="co"># construye un gráfico con los datos.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Sesion2_lect_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<p><img src="PR_1_lect_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Como ve, aunque es cierto que las funciones están en inglés. el código de R es bastante comprensible.</p>
@@ -872,7 +872,7 @@ CT       193   4256 341.0   774</code></pre>
 <span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a><span class="fu">plot.new</span>()</span>
 <span id="cb74-6"><a href="#cb74-6" aria-hidden="true" tabindex="-1"></a><span class="fu">barplot</span>(<span class="fu">table</span>(df1<span class="sc">$</span>sex))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Sesion2_lect_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+<p><img src="PR_1_lect_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">recordPlot</span>()</span>
 <span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -889,7 +889,7 @@ CT       193   4256 341.0   774</code></pre>
  $ :'data.frame':   50 obs. of  3 variables:
  $ :List of 3
   ..- attr(*, "engineVersion")= int 16
-  ..- attr(*, "pid")= int 7556
+  ..- attr(*, "pid")= int 19560
   ..- attr(*, "Rversion")=Classes 'R_system_version', 'package_version', 'numeric_version'  hidden list of 1
   ..- attr(*, "load")= chr(0) 
   ..- attr(*, "attach")= chr(0) 
@@ -901,7 +901,7 @@ CT       193   4256 341.0   774</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb79"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a href="#cb79-1" aria-hidden="true" tabindex="-1"></a>lista1[[<span class="dv">4</span>]] <span class="co">#Esto llamaría al cuarto elemento de la lista, que era el gráfico.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="Sesion2_lect_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+<p><img src="PR_1_lect_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 <p>Los elementos de las listas pueden también tener nombres y ser llamados por ellos. Esta lista no los tiene, pero se le pueden asignar utilizando un simple vector (recordad que en R hay muchas estructuras vectoriales).</p>
@@ -913,16 +913,16 @@ CT       193   4256 341.0   774</code></pre>
 <div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a href="#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(lista1<span class="sc">$</span>mi_dataframe,<span class="at">n =</span> <span class="dv">10</span>) <span class="co">#Uso head con al argumento n=10 para que solo muestre las 10 primeras filas.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     id pas    sex
-1  1001 121 Hombre
-2  1002 120 Hombre
-3  1003 115 Hombre
-4  1004 119 Hombre
-5  1005 117  Mujer
-6  1006 115 Hombre
-7  1007 115 Hombre
-8  1008 124 Hombre
-9  1009 120 Hombre
-10 1010 122 Hombre</code></pre>
+1  1001 124 Hombre
+2  1002 124 Hombre
+3  1003 112 Hombre
+4  1004 116 Hombre
+5  1005 123 Hombre
+6  1006 120 Hombre
+7  1007 110  Mujer
+8  1008 127 Hombre
+9  1009 115 Hombre
+10 1010 122  Mujer</code></pre>
 </div>
 </div>
 </section>
@@ -966,7 +966,7 @@ CT       193   4256 341.0   774</code></pre>
     }
     else all.names
 }
-&lt;bytecode: 0x00000137b45cf770&gt;
+&lt;bytecode: 0x00000252c7915830&gt;
 &lt;environment: namespace:base&gt;</code></pre>
 </div>
 </div>

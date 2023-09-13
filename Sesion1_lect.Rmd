@@ -1,5 +1,5 @@
 ---
-title: "Práctica 1 <br> Recopilar datos"
+title: "Práctica 0<br>Buenas prácticas en recopilación de datos"
 author: "Jesús Esteban Hernández"
 date: "6/09/2023"
 output:
@@ -146,7 +146,7 @@ De igual manera, sería extraño realizar un análisis para no comunicarlo, por 
 
 ![Data Science WorkFlow](pics/datascience_proj.png)
 
-# Sesión P1 Criterios de buena praxis en la recopilación de datos.
+# Criterios de buena praxis en la recopilación de datos.
 
 Como veremos al termina la sección, no siempre contamos con la mejor solución a la hora de recoger los datos, pero esto no evita la necesidad de recogerlos con la mayor calidad posible, tarea que comienza incluso antes de su recogida.
 Siendo esencial, en esta sesión no hablaremos de la importancia de la definición adecuada de las variables, algunos de cuyos aspectos habrán sido ya comentados en las clases presenciales.

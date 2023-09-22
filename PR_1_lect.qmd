@@ -1,5 +1,5 @@
 ---
-title: "Práctica1 <br>  Introducción a R y RStudio."
+title: "PR1-Introducción a R y RStudio."
 author: "Jesús Esteban Hernández"
 date: "2/12/2022"
 output:
@@ -126,11 +126,9 @@ Por otro lado, sería extraño realizar un análisis para no comunicarlo, por lo
 
 ![Data Science WorkFlow](pics/datascience_proj.png){width="50%"}
 
-## Aspectos básicos sobre funcionamiento de R.
+## ¿Por qué utilizar R para analizar los datos de tu investigación?
 
-### ¿Por qué utilizar R para analizar los datos de tu investigación?
-
-#### Ventajas:
+### Ventajas:
 
 -   Código vs. ventanas. (En realidad,  SPSS, Stata, SAS... también se pueden utilizar usando código)
 -   Reproducibilidad (interna y externa).
@@ -141,34 +139,40 @@ Por otro lado, sería extraño realizar un análisis para no comunicarlo, por lo
 -   Nadie te acusará de estar pirateando software.
 -   Una vez conoces los fundamentos, puedes crecer lo que desees.
 
-#### Desventaja.
+### Desventaja.
 
 -   Curva de aprendizaje lenta en comparación con las *ventanas*.
 
-### Instalación de R y RStudio.
+## Instalación de R y RStudio.
 
 Es conveniente instalar R y luego RStudio.
 
-Instalar R desde aquí: <https://cran.r-project.org/> Instalar RStudio Desktop desde aquí: <https://posit.co/downloads/>
+  1. Instalar R desde aquí: <https://cran.r-project.org/> 
+  2. Instalar RStudio Desktop desde aquí: <https://posit.co/downloads/>
 
 Para detalles sobre la instalación y otros aspectos básicos, [este recurso](https://anabelforte.com/2022/11/20/empezando-en-r-con-rstudio/) creado por Anabel Forte Deltell (más conocida como BayesAna) [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/AnaBayes.svg?style=social&label=Follow%20%40AnaBayes)](https://twitter.com/AnaBayes) es un buen punto de arranque.
 
-### Conceptos básicos para comenzar a trabajar con R en RStudio.
+## Trabajando con R+RStudio.
+### Conceptos básicos para comenzar a trabajar .
+
+Aunque no en este orden, repasaremos todos estos conceptos durante la sesión. 
+
+No hace falta que los memorices ahora. Se trata de conceptos que irás incorporando mientras practicas con RStudio.
+
+-   Workspace, directorio de trabajo , Imagen (.RData).
+-   Paneles: Console, Script,Environment/History/Connection/Tutorial .
+-   Métodos abreviados de teclado útiles. Ctrl+Intro, Ctrl+Shift+C, Ctrl+Shift+N...
+-   Cómo instalar bibliotecas (library).
+-   Cómo abrir o llamar a una biblioteca: *require()*, *library()*.
+-   Cómo llamar a las funciones de una biblioteca (la posición de los argumentos es relevante).
+-   Organización del script: Comentar, Outline, ejecución de líneas.
+-   Cómo pedir ayuda en Rstudio y en internet.
+
 
 ![Paneles en RStudio](pics/panelesRstudio.png){width="200%"}
 
 
--   Workspace, directorio de trabajo , Imagen (.RData).
--   Paneles: Console, Script,Environment/History/Connection/Tutorial .
--   Métodos abreviados de teclado. Ctrl+Intro, Ctrl+Shift+C, Ctrl+Shift+N...
--   Cómo instalar bibliotecas (library).
--   Cómo abrir o llamar a una biblioteca: require(), library()
--   Cómo llamar a las funciones de una biblioteca.
--   Recordar que la posición es relevante al introducir argumentos.
--   Organización del script: Comentar, Outline, ejecución de líneas.
--   Cómo pedir ayuda en Rstudio y en internet.
-
-## Primeros pasos.
+### Primeros pasos.
 
 ### Recordando cómo *"piensa"* R.
 
@@ -248,7 +252,7 @@ Para esto se usa la expresión *library_name::function()*.
     Nota: Todos los objetos tienen atributos length y mode.
     Los arrays además tienen dim.
 
-### Sobre el código en R.
+### Organización del script.
 
 -   Las funciones se pueden separar por ";" o por un salto de línea.
 
@@ -264,13 +268,14 @@ Para esto se usa la expresión *library_name::function()*.
   * Coherente. () []: Los paréntesis han de ser coherentes (cada apertura su cierre).
   * Cuidado con caracteres reservados: =, \$, &, \*, o prohibidos ä,ü,í,...: Reservados para cometidos concretos, mejor evitar ñ y otros caracteres "extraños".
 
+
 ## Primer script.
 
 Abre una pestaña para crear tu primer script.
 Lo puedes hacer desde el menú *File/New File/R script* o con el método de teclado abreviado *Ctrl+May+N*[^1].
 
 Se abrirá una pestaña que señala el nuevo script.
-Pegue en ese espacio el siguiente código:
+Pega en ese espacio el siguiente código:
 
 ```{r}
 
@@ -280,25 +285,26 @@ plot(cars) # construye un gráfico con los datos.
 
 ```
 
-Como ve, aunque es cierto que las funciones están en inglés.
-el código de R es bastante comprensible.
+Como ves, aunque las funciones están en inglés, el código de R es bastante comprensible para un humano.
 
 Puede salvar el script pulsando el disquete azul bajo la pestaña...
 
 ![Save script](pics/Salvar_script.png)
 
-... o más fácil, con la combinación de teclas Ctrl+s.
+... o más fácil, con la combinación de teclas *Ctrl+s*.
 
-Las personas que utilizamos R para enseñar estadística tenemos diferentes opiniones sobre si debemos enseñar a utilizar lo que llamamos *base R*, las funciones más básicas de r, en su mayoría incluidas en un paquete llamado *base*, o si es mejor ir directamente hacia lo que llamamos *modern R*, que utiliza algo llamado pipes (*%\>%*) que simplifica enormemente el código necesario para realizar tareas complejas.
-De hecho, aunque prácticamente todo se podría construir on rbase, el uso del denominado *tidyverse* (que incluye un conjunto de paquetes bajo esta filosofía) agiliza mucho el trabajo, por lo que es con lo que todos finalmente trabajamos.
+Las personas que utilizamos R para enseñar estadística tenemos diferentes opiniones sobre si debemos enseñar a utilizar lo que llamamos *base R* (las funciones más básicas de r, en su mayoría incluidas en un paquete llamado *base*) o si es mejor ir directamente hacia lo que llamamos *modern R*, que utiliza algo llamado pipes (*%\>%* o más recientemente *|>*) que simplifica enormemente el código necesario para realizar tareas complejas.
+
+De hecho, aunque prácticamente todo se podría construir con rbase, el uso del denominado *tidyverse* (que incluye un conjunto de paquetes bajo esta filosofía) agiliza mucho el trabajo, por lo que es con lo que  finalmente todos trabajamos.
 
 **¿Merece la pena aprender algo de rbase?**
 
 En mi opinión sí, porque aunque utilices pipes, de vez en cuando afloran conceptos básicos.
-Otros profesores opinan que es mejor llevar al alumno directamente al **tidyverse** porque al final es lo que vais a utilizar.
-Entender conceptos como la indexación, los tipos de objetos, las clases de vectores... te ayuda a entender y solucionar los problemas que seguro aparecerán, los mensajes de error y sobre todo las soluciones que encontrarás en los blogs dedicados a este tema.
+Otros profesores, en cambio, opinan que es mejor llevar al alumnado directamente al **tidyverse** porque al final es lo que vais a utilizar.
 
-Las próximas líneas están dedicadas a mostrar algunos comandos muy básicos que ayudan a entender los diferentes objetos y estructuras aunque luego muchas de estas funciones permanecerán escondidas en el interior de funciones más complejas contenidas en otros paquetes.
+Nosotros pensamos que saber indexar, conocrer los tipos de objetos, las clases de vectores, etc te ayudara a entender y solucionar los problemas que seguro aparecerán en el **tidyverse**, a descifrar los mensajes de error y sobre todo a comprender las soluciones que encontrarás en los blogs dedicados a este tema.
+
+Las próximas líneas están dedicadas a mostrar algunos comandos básicos que ayudan a comprender los diferentes objetos y estructuras con las que vamos a trabajar, aunque luego muchas de estas funciones permanecerán escondidas en el interior de funciones más complejas contenidas en otros paquetes.
 
 ## Creación de objetos.
 
@@ -330,10 +336,11 @@ Mencionaré tres de ellas[^3]:
 
 Ejemplo de uso:
 
-### Array (vector, matrix, array)
+#### Array (vector, matrix, array)
 
 Un array contiene un conjunto de elementos (números o caracteres) del mismo tipo en una estructura ordenada.
-En función de las dimensiones puede ser un vector (1 dimensión), una matrix (2 dimensiones) o un array (3 dimensiones).
+En función de las dimensiones puede ser un vector (1 dimensión), una matriz (2 dimensiones) o un array (3 dimensiones).
+
 **Importante: Solo puede contener elementos del mismo tipo**
 
 #### Vectores.
@@ -341,8 +348,8 @@ En función de las dimensiones puede ser un vector (1 dimensión), una matrix (2
 ```{r vector}
 y<-c(4,8,22,32,25) #crea un vector de 5 elementos que son números (escalares)
 y # llamamos al objeto para que lo devuelva.
-names<-c('Juan','Luis','Mónica','Julia') #Genera un vector que contiene cadenas de caracteres.
-names #llamamos al objeto para que lo devuelva.
+nombres<-c('Juan','Luis','Mónica','Julia') #Genera un vector que contiene cadenas de caracteres.
+nombres #llamamos al objeto para que lo devuelva.
 ```
 
 ```         
@@ -358,7 +365,7 @@ ls()
 Y eliminarlos también.
 
 ```{r remove}
-rm(names)
+rm(nombres)
 ```
 
 Comprobamos que lo ha eliminado.
@@ -455,7 +462,7 @@ ar
 ```
 
 Como no son de uso habitual, no profundizaré en su uso.
-Como podéis ver, elementos del mismo tipo, en este caso numéricos, pero podrían ser caracteres (texto).
+Como podéis ver, elementos han de ser del mismo tipo, en este caso numéricos, pero podrían ser caracteres (texto).
 
 ```{r}
 ar2 <- array(rep(c('red','yellow','green'),6),c(2,3,2))
@@ -471,7 +478,7 @@ Soy consciente de que hasta aquí puede no haber visto la utilidad de lo expuest
 
 Así llegamos un objeto clave para el análisis de datos con R: **el dataframe**.
 
-### Dataframe
+#### Dataframe
 
 Como ya comentamos se trata de una estructura con forma de matriz (todos los vectores han de tener la misma longitud), pero a diferencia de esta, **un dataframe sí puede contener información de distinto tipo**, fundamentalmente números (integer o numeric), de caracteres (texto), lógicos (TRUE/FALSE) y factores (este último será la forma en la que recomendaremos guardar variables categóricas y por su especificidad le dedicaremos un epígrafe propio).
 
@@ -575,7 +582,7 @@ iris$Sepal.Ratio<-NULL
 
 Una vez hemos visto lo básico sobre cómo manejarse con un dataframe, en la siguiente sesión aprenderemos a importar uno.
 
-### Listas.
+#### Listas.
 
 La *lista* es un objeto que a pesar de su utilidad cuesta comprender cuando estás empezando a trabajar con R.
 En cierto modo es un contenedor porque puede almacenar otros objetos de diferente tipo (vectores, arrays, dataframes, gráficos) en su interior.
@@ -634,7 +641,7 @@ Ahora podemos usar el nombre para llamar a los elementos de la lista, parecido a
 head(lista1$mi_dataframe,n = 10) #Uso head con al argumento n=10 para que solo muestre las 10 primeras filas.
 ```
 
-### Funciones (un par de palabras)
+#### Funciones (un par de palabras)
 
 A lo largo de esta sesión, de manera más o menos consciente, habéis trabajado con funciones.
 Estas funciones están contenidas en las librerías que hemos mencionado al inicio de la sesión.

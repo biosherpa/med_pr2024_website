@@ -9,7 +9,7 @@
 <meta name="author" content="Jesús Esteban Hernández">
 <meta name="dcterms.date" content="2022-02-12">
 
-<title>Bioestadística - Práctica1  Introducción a R y RStudio.</title>
+<title>Bioestadística - PR1-Introducción a R y RStudio.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./PR_1_lect.html">Descriptiva</a></li><li class="breadcrumb-item"><a href="./PR_1_lect.html">Práctica1 <br>  Introducción a R y RStudio.</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./PR_0_lect.html">Intro</a></li><li class="breadcrumb-item"><a href="./PR_1_lect.html">PR1-Introducción a R y RStudio.</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -147,7 +147,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./PR_0_lect.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 0 <br> Buenas prácticas en recopilación de datos</span></a>
+ <span class="menu-text">PR0-Buenas prácticas en recopilación de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PR_1_lect.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">PR1-Introducción a R y RStudio.</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PR_2_lect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PR2-Importación de datos.</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PR_3_lect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PR3-Manipulación de datos.</span></a>
   </div>
 </li>
       </ul>
@@ -163,14 +181,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./PR_1_lect.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Práctica1 <br> Introducción a R y RStudio.</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./PR_3_lect.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 3 <br> Importación y manipulación de datos.</span></a>
+  <a href="./PR_4_lect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PR4-Estadística Descriptiva.</span></a>
   </div>
 </li>
       </ul>
@@ -186,14 +198,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./PR_4_lect.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 4 <br> Estadística Descriptiva.</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./PR_5_lect.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 5 <br> Estadística inferencial. Comparación de proporciones.</span></a>
+ <span class="menu-text">PR5 <br> Estadística inferencial. Comparación de proporciones.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -216,28 +222,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#introducción-a-rrstudio." id="toc-introducción-a-rrstudio." class="nav-link active" data-scroll-target="#introducción-a-rrstudio.">Introducción a R+RStudio.</a>
   <ul class="collapse">
-  <li><a href="#aspectos-básicos-sobre-funcionamiento-de-r." id="toc-aspectos-básicos-sobre-funcionamiento-de-r." class="nav-link" data-scroll-target="#aspectos-básicos-sobre-funcionamiento-de-r.">Aspectos básicos sobre funcionamiento de R.</a>
+  <li><a href="#por-qué-utilizar-r-para-analizar-los-datos-de-tu-investigación" id="toc-por-qué-utilizar-r-para-analizar-los-datos-de-tu-investigación" class="nav-link" data-scroll-target="#por-qué-utilizar-r-para-analizar-los-datos-de-tu-investigación">¿Por qué utilizar R para analizar los datos de tu investigación?</a>
   <ul class="collapse">
-  <li><a href="#por-qué-utilizar-r-para-analizar-los-datos-de-tu-investigación" id="toc-por-qué-utilizar-r-para-analizar-los-datos-de-tu-investigación" class="nav-link" data-scroll-target="#por-qué-utilizar-r-para-analizar-los-datos-de-tu-investigación">¿Por qué utilizar R para analizar los datos de tu investigación?</a></li>
-  <li><a href="#instalación-de-r-y-rstudio." id="toc-instalación-de-r-y-rstudio." class="nav-link" data-scroll-target="#instalación-de-r-y-rstudio.">Instalación de R y RStudio.</a></li>
-  <li><a href="#conceptos-básicos-para-comenzar-a-trabajar-con-r-en-rstudio." id="toc-conceptos-básicos-para-comenzar-a-trabajar-con-r-en-rstudio." class="nav-link" data-scroll-target="#conceptos-básicos-para-comenzar-a-trabajar-con-r-en-rstudio.">Conceptos básicos para comenzar a trabajar con R en RStudio.</a></li>
+  <li><a href="#ventajas" id="toc-ventajas" class="nav-link" data-scroll-target="#ventajas">Ventajas:</a></li>
+  <li><a href="#desventaja." id="toc-desventaja." class="nav-link" data-scroll-target="#desventaja.">Desventaja.</a></li>
   </ul></li>
-  <li><a href="#primeros-pasos." id="toc-primeros-pasos." class="nav-link" data-scroll-target="#primeros-pasos.">Primeros pasos.</a>
+  <li><a href="#instalación-de-r-y-rstudio." id="toc-instalación-de-r-y-rstudio." class="nav-link" data-scroll-target="#instalación-de-r-y-rstudio.">Instalación de R y RStudio.</a></li>
+  <li><a href="#trabajando-con-rrstudio." id="toc-trabajando-con-rrstudio." class="nav-link" data-scroll-target="#trabajando-con-rrstudio.">Trabajando con R+RStudio.</a>
   <ul class="collapse">
+  <li><a href="#conceptos-básicos-para-comenzar-a-trabajar-." id="toc-conceptos-básicos-para-comenzar-a-trabajar-." class="nav-link" data-scroll-target="#conceptos-básicos-para-comenzar-a-trabajar-.">Conceptos básicos para comenzar a trabajar .</a></li>
+  <li><a href="#primeros-pasos." id="toc-primeros-pasos." class="nav-link" data-scroll-target="#primeros-pasos.">Primeros pasos.</a></li>
   <li><a href="#recordando-cómo-piensa-r." id="toc-recordando-cómo-piensa-r." class="nav-link" data-scroll-target="#recordando-cómo-piensa-r.">Recordando cómo <em>“piensa”</em> R.</a></li>
   <li><a href="#uso-de-la-ayuda-de-r-help-o-." id="toc-uso-de-la-ayuda-de-r-help-o-." class="nav-link" data-scroll-target="#uso-de-la-ayuda-de-r-help-o-.">Uso de la ayuda de R: help, ? o ??.</a></li>
   <li><a href="#instalar-paquetes-y-llamarlos-no-son-la-misma-cosa." id="toc-instalar-paquetes-y-llamarlos-no-son-la-misma-cosa." class="nav-link" data-scroll-target="#instalar-paquetes-y-llamarlos-no-son-la-misma-cosa.">Instalar paquetes y llamarlos no son la misma cosa.</a></li>
   <li><a href="#tipos-de-objetos-en-r-los-básicos." id="toc-tipos-de-objetos-en-r-los-básicos." class="nav-link" data-scroll-target="#tipos-de-objetos-en-r-los-básicos.">Tipos de objetos en R (los básicos).</a></li>
-  <li><a href="#sobre-el-código-en-r." id="toc-sobre-el-código-en-r." class="nav-link" data-scroll-target="#sobre-el-código-en-r.">Sobre el código en R.</a></li>
+  <li><a href="#organización-del-script." id="toc-organización-del-script." class="nav-link" data-scroll-target="#organización-del-script.">Organización del script.</a></li>
   </ul></li>
   <li><a href="#primer-script." id="toc-primer-script." class="nav-link" data-scroll-target="#primer-script.">Primer script.</a></li>
-  <li><a href="#creación-de-objetos." id="toc-creación-de-objetos." class="nav-link" data-scroll-target="#creación-de-objetos.">Creación de objetos.</a>
-  <ul class="collapse">
-  <li><a href="#array-vector-matrix-array" id="toc-array-vector-matrix-array" class="nav-link" data-scroll-target="#array-vector-matrix-array">Array (vector, matrix, array)</a></li>
-  <li><a href="#dataframe" id="toc-dataframe" class="nav-link" data-scroll-target="#dataframe">Dataframe</a></li>
-  <li><a href="#listas." id="toc-listas." class="nav-link" data-scroll-target="#listas.">Listas.</a></li>
-  <li><a href="#funciones-un-par-de-palabras" id="toc-funciones-un-par-de-palabras" class="nav-link" data-scroll-target="#funciones-un-par-de-palabras">Funciones (un par de palabras)</a></li>
-  </ul></li>
+  <li><a href="#creación-de-objetos." id="toc-creación-de-objetos." class="nav-link" data-scroll-target="#creación-de-objetos.">Creación de objetos.</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -247,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Práctica1 <br> Introducción a R y RStudio.</h1>
+<h1 class="title">PR1-Introducción a R y RStudio.</h1>
 </div>
 
 
@@ -361,12 +363,10 @@ tocify-header {
 <figcaption class="figure-caption">Data Science WorkFlow</figcaption>
 </figure>
 </div>
-<section id="aspectos-básicos-sobre-funcionamiento-de-r." class="level2">
-<h2 class="anchored" data-anchor-id="aspectos-básicos-sobre-funcionamiento-de-r.">Aspectos básicos sobre funcionamiento de R.</h2>
-<section id="por-qué-utilizar-r-para-analizar-los-datos-de-tu-investigación" class="level3">
-<h3 class="anchored" data-anchor-id="por-qué-utilizar-r-para-analizar-los-datos-de-tu-investigación">¿Por qué utilizar R para analizar los datos de tu investigación?</h3>
-<section id="ventajas" class="level4">
-<h4 class="anchored" data-anchor-id="ventajas">Ventajas:</h4>
+<section id="por-qué-utilizar-r-para-analizar-los-datos-de-tu-investigación" class="level2">
+<h2 class="anchored" data-anchor-id="por-qué-utilizar-r-para-analizar-los-datos-de-tu-investigación">¿Por qué utilizar R para analizar los datos de tu investigación?</h2>
+<section id="ventajas" class="level3">
+<h3 class="anchored" data-anchor-id="ventajas">Ventajas:</h3>
 <ul>
 <li>Código vs.&nbsp;ventanas. (En realidad, SPSS, Stata, SAS… también se pueden utilizar usando código)</li>
 <li>Reproducibilidad (interna y externa).</li>
@@ -378,42 +378,48 @@ tocify-header {
 <li>Una vez conoces los fundamentos, puedes crecer lo que desees.</li>
 </ul>
 </section>
-<section id="desventaja." class="level4">
-<h4 class="anchored" data-anchor-id="desventaja.">Desventaja.</h4>
+<section id="desventaja." class="level3">
+<h3 class="anchored" data-anchor-id="desventaja.">Desventaja.</h3>
 <ul>
 <li>Curva de aprendizaje lenta en comparación con las <em>ventanas</em>.</li>
 </ul>
 </section>
 </section>
-<section id="instalación-de-r-y-rstudio." class="level3">
-<h3 class="anchored" data-anchor-id="instalación-de-r-y-rstudio.">Instalación de R y RStudio.</h3>
+<section id="instalación-de-r-y-rstudio." class="level2">
+<h2 class="anchored" data-anchor-id="instalación-de-r-y-rstudio.">Instalación de R y RStudio.</h2>
 <p>Es conveniente instalar R y luego RStudio.</p>
-<p>Instalar R desde aquí: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a> Instalar RStudio Desktop desde aquí: <a href="https://posit.co/downloads/" class="uri">https://posit.co/downloads/</a></p>
+<ol type="1">
+<li>Instalar R desde aquí: <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></li>
+<li>Instalar RStudio Desktop desde aquí: <a href="https://posit.co/downloads/" class="uri">https://posit.co/downloads/</a></li>
+</ol>
 <p>Para detalles sobre la instalación y otros aspectos básicos, <a href="https://anabelforte.com/2022/11/20/empezando-en-r-con-rstudio/">este recurso</a> creado por Anabel Forte Deltell (más conocida como BayesAna) <a href="https://twitter.com/AnaBayes"><img src="https://img.shields.io/twitter/url/https/twitter.com/AnaBayes.svg?style=social&amp;label=Follow%20%40AnaBayes" class="img-fluid" alt="Twitter URL"></a> es un buen punto de arranque.</p>
 </section>
-<section id="conceptos-básicos-para-comenzar-a-trabajar-con-r-en-rstudio." class="level3">
-<h3 class="anchored" data-anchor-id="conceptos-básicos-para-comenzar-a-trabajar-con-r-en-rstudio.">Conceptos básicos para comenzar a trabajar con R en RStudio.</h3>
+<section id="trabajando-con-rrstudio." class="level2">
+<h2 class="anchored" data-anchor-id="trabajando-con-rrstudio.">Trabajando con R+RStudio.</h2>
+<section id="conceptos-básicos-para-comenzar-a-trabajar-." class="level3">
+<h3 class="anchored" data-anchor-id="conceptos-básicos-para-comenzar-a-trabajar-.">Conceptos básicos para comenzar a trabajar .</h3>
+<p>Aunque no en este orden, repasaremos todos estos conceptos durante la sesión.</p>
+<p>No hace falta que los memorices ahora. Se trata de conceptos que irás incorporando mientras practicas con RStudio.</p>
+<ul>
+<li>Workspace, directorio de trabajo , Imagen (.RData).</li>
+<li>Paneles: Console, Script,Environment/History/Connection/Tutorial .</li>
+<li>Métodos abreviados de teclado útiles. Ctrl+Intro, Ctrl+Shift+C, Ctrl+Shift+N…</li>
+<li>Cómo instalar bibliotecas (library).</li>
+<li>Cómo abrir o llamar a una biblioteca: <em>require()</em>, <em>library()</em>.</li>
+<li>Cómo llamar a las funciones de una biblioteca (la posición de los argumentos es relevante).</li>
+<li>Organización del script: Comentar, Outline, ejecución de líneas.</li>
+<li>Cómo pedir ayuda en Rstudio y en internet.</li>
+</ul>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pics/panelesRstudio.png" class="img-fluid figure-img" style="width:200.0%"></p>
 <figcaption class="figure-caption">Paneles en RStudio</figcaption>
 </figure>
 </div>
-<ul>
-<li>Workspace, directorio de trabajo , Imagen (.RData).</li>
-<li>Paneles: Console, Script,Environment/History/Connection/Tutorial .</li>
-<li>Métodos abreviados de teclado. Ctrl+Intro, Ctrl+Shift+C, Ctrl+Shift+N…</li>
-<li>Cómo instalar bibliotecas (library).</li>
-<li>Cómo abrir o llamar a una biblioteca: require(), library()</li>
-<li>Cómo llamar a las funciones de una biblioteca.</li>
-<li>Recordar que la posición es relevante al introducir argumentos.</li>
-<li>Organización del script: Comentar, Outline, ejecución de líneas.</li>
-<li>Cómo pedir ayuda en Rstudio y en internet.</li>
-</ul>
 </section>
+<section id="primeros-pasos." class="level3">
+<h3 class="anchored" data-anchor-id="primeros-pasos.">Primeros pasos.</h3>
 </section>
-<section id="primeros-pasos." class="level2">
-<h2 class="anchored" data-anchor-id="primeros-pasos.">Primeros pasos.</h2>
 <section id="recordando-cómo-piensa-r." class="level3">
 <h3 class="anchored" data-anchor-id="recordando-cómo-piensa-r.">Recordando cómo <em>“piensa”</em> R.</h3>
 <div class="quarto-figure quarto-figure-center">
@@ -446,10 +452,16 @@ tocify-header {
 <section id="instalar-paquetes-y-llamarlos-no-son-la-misma-cosa." class="level3">
 <h3 class="anchored" data-anchor-id="instalar-paquetes-y-llamarlos-no-son-la-misma-cosa.">Instalar paquetes y llamarlos no son la misma cosa.</h3>
 <p>Cuando explico este tema, suelo utilizar el ejemplo que sugieren los nombres que vamos a utilizar, solo que en otro contexto.</p>
-<p>Instalar la librería (<em>install.packages(‘library_name’)</em>) significa ir a la tienda y comprar la biblioteca (library) con los libros incluidos. Cargarla (<em>library(library_name)</em>) o llamarla (<em>require(library_name)</em>) sería equivalente a abrir la librería y ponerla a disposición del usuario. Llamar a una de las funciones que contiene sería equivalente a utilizar uno de los libros (<em>function_name(args,…)</em>), libro que puedo usar de muchas formas, siempre que conozca los los <em>argumentos</em> para poder hacerlo de la forma que yo deseo.</p>
+<p>Instalar la librería (<em>install.packages(‘library_name’)</em>) significa ir a la tienda y comprar la biblioteca (library) con los libros incluidos.</p>
+<p>Cargarla (<em>library(library_name)</em>) o llamarla (<em>require(library_name)</em>) sería equivalente a abrir la librería y ponerla a disposición del usuario.</p>
+<p>Llamar a una de las funciones que contiene sería equivalente a utilizar uno de los libros (<em>function_name(args,…)</em>), libro que puedo usar de muchas formas, siempre que conozca los los <em>argumentos</em> para poder hacerlo de la forma que yo deseo.</p>
 <blockquote class="blockquote">
-<p>Nota: * Aunque no son exactamente lo mismo, escuchará library, biblioteca o paquete para referirse a estas bibliotecas (traducción al español de library). * Para utilizar las funciones anteriores, deberá sustituir <em>library_name</em> por el nombre de la biblioteca (<em>library</em>) que corresponda, y <em>function_name</em> por la función de dicha librería que desee utilizar.</p>
+<p>Nota:</p>
 </blockquote>
+<ul>
+<li>Aunque no son exactamente lo mismo, escuchará library, biblioteca o paquete para referirse a estas bibliotecas (traducción al español de library).</li>
+<li>Para utilizar las funciones anteriores, deberá sustituir <em>library_name</em> por el nombre de la biblioteca (<em>library</em>) que corresponda, y <em>function_name</em> por la función de dicha librería que desee utilizar.</li>
+</ul>
 <p>Instalar un paquete implica copiar una serie de archivos en su ordenador en una carpeta ubicada en un subdirectorio bajo la carpeta de R, es decir es un <em>hecho físico constatable</em>.</p>
 <blockquote class="blockquote">
 <p>Nota: Se puede cambiar la ubicación pero de momento recomendamos que deje a R instalarlos en la ubicación por defecto que contiene todas las bibliotecas [<em>libraries</em>]. Para ver qué librerías tenemos instaladas, podemos utilizar la función <em>installed.packages()</em>. Verá que pueden estar en diferentes ubicaciones.</p>
@@ -469,8 +481,8 @@ tocify-header {
 <p>Nota: Todos los objetos tienen atributos length y mode. Los arrays además tienen dim.</p></li>
 </ul>
 </section>
-<section id="sobre-el-código-en-r." class="level3">
-<h3 class="anchored" data-anchor-id="sobre-el-código-en-r.">Sobre el código en R.</h3>
+<section id="organización-del-script." class="level3">
+<h3 class="anchored" data-anchor-id="organización-del-script.">Organización del script.</h3>
 <ul>
 <li><p>Las funciones se pueden separar por “;” o por un salto de línea.</p></li>
 <li><p>Se puede escribir en más de una línea y se pueden agrupar “{}” dentro de una función.</p></li>
@@ -485,7 +497,7 @@ tocify-header {
 <section id="primer-script." class="level2">
 <h2 class="anchored" data-anchor-id="primer-script.">Primer script.</h2>
 <p>Abre una pestaña para crear tu primer script. Lo puedes hacer desde el menú <em>File/New File/R script</em> o con el método de teclado abreviado <em>Ctrl+May+N</em><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<p>Se abrirá una pestaña que señala el nuevo script. Pegue en ese espacio el siguiente código:</p>
+<p>Se abrirá una pestaña que señala el nuevo script. Pega en ese espacio el siguiente código:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(car) <span class="co"># carga la biblioteca, que a su vez permite el acceso a los datos de una base de datos sobre coches.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
@@ -520,7 +532,7 @@ Attaching package: 'car'</code></pre>
 <p><img src="PR_1_lect_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>Como ve, aunque es cierto que las funciones están en inglés. el código de R es bastante comprensible.</p>
+<p>Como ves, aunque las funciones están en inglés, el código de R es bastante comprensible para un humano.</p>
 <p>Puede salvar el script pulsando el disquete azul bajo la pestaña…</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -528,11 +540,13 @@ Attaching package: 'car'</code></pre>
 <figcaption class="figure-caption">Save script</figcaption>
 </figure>
 </div>
-<p>… o más fácil, con la combinación de teclas Ctrl+s.</p>
-<p>Las personas que utilizamos R para enseñar estadística tenemos diferentes opiniones sobre si debemos enseñar a utilizar lo que llamamos <em>base R</em>, las funciones más básicas de r, en su mayoría incluidas en un paquete llamado <em>base</em>, o si es mejor ir directamente hacia lo que llamamos <em>modern R</em>, que utiliza algo llamado pipes (<em>%&gt;%</em>) que simplifica enormemente el código necesario para realizar tareas complejas. De hecho, aunque prácticamente todo se podría construir on rbase, el uso del denominado <em>tidyverse</em> (que incluye un conjunto de paquetes bajo esta filosofía) agiliza mucho el trabajo, por lo que es con lo que todos finalmente trabajamos.</p>
+<p>… o más fácil, con la combinación de teclas <em>Ctrl+s</em>.</p>
+<p>Las personas que utilizamos R para enseñar estadística tenemos diferentes opiniones sobre si debemos enseñar a utilizar lo que llamamos <em>base R</em> (las funciones más básicas de r, en su mayoría incluidas en un paquete llamado <em>base</em>) o si es mejor ir directamente hacia lo que llamamos <em>modern R</em>, que utiliza algo llamado pipes (<em>%&gt;%</em> o más recientemente <em>|&gt;</em>) que simplifica enormemente el código necesario para realizar tareas complejas.</p>
+<p>De hecho, aunque prácticamente todo se podría construir con rbase, el uso del denominado <em>tidyverse</em> (que incluye un conjunto de paquetes bajo esta filosofía) agiliza mucho el trabajo, por lo que es con lo que finalmente todos trabajamos.</p>
 <p><strong>¿Merece la pena aprender algo de rbase?</strong></p>
-<p>En mi opinión sí, porque aunque utilices pipes, de vez en cuando afloran conceptos básicos. Otros profesores opinan que es mejor llevar al alumno directamente al <strong>tidyverse</strong> porque al final es lo que vais a utilizar. Entender conceptos como la indexación, los tipos de objetos, las clases de vectores… te ayuda a entender y solucionar los problemas que seguro aparecerán, los mensajes de error y sobre todo las soluciones que encontrarás en los blogs dedicados a este tema.</p>
-<p>Las próximas líneas están dedicadas a mostrar algunos comandos muy básicos que ayudan a entender los diferentes objetos y estructuras aunque luego muchas de estas funciones permanecerán escondidas en el interior de funciones más complejas contenidas en otros paquetes.</p>
+<p>En mi opinión sí, porque aunque utilices pipes, de vez en cuando afloran conceptos básicos. Otros profesores, en cambio, opinan que es mejor llevar al alumnado directamente al <strong>tidyverse</strong> porque al final es lo que vais a utilizar.</p>
+<p>Nosotros pensamos que saber indexar, conocrer los tipos de objetos, las clases de vectores, etc te ayudara a entender y solucionar los problemas que seguro aparecerán en el <strong>tidyverse</strong>, a descifrar los mensajes de error y sobre todo a comprender las soluciones que encontrarás en los blogs dedicados a este tema.</p>
+<p>Las próximas líneas están dedicadas a mostrar algunos comandos básicos que ayudan a comprender los diferentes objetos y estructuras con las que vamos a trabajar, aunque luego muchas de estas funciones permanecerán escondidas en el interior de funciones más complejas contenidas en otros paquetes.</p>
 </section>
 <section id="creación-de-objetos." class="level2">
 <h2 class="anchored" data-anchor-id="creación-de-objetos.">Creación de objetos.</h2>
@@ -560,9 +574,11 @@ Attaching package: 'car'</code></pre>
 <li><em>rm()</em>: Elimina objetos del espacio.</li>
 </ul>
 <p>Ejemplo de uso:</p>
-<section id="array-vector-matrix-array" class="level3">
-<h3 class="anchored" data-anchor-id="array-vector-matrix-array">Array (vector, matrix, array)</h3>
-<p>Un array contiene un conjunto de elementos (números o caracteres) del mismo tipo en una estructura ordenada. En función de las dimensiones puede ser un vector (1 dimensión), una matrix (2 dimensiones) o un array (3 dimensiones). <strong>Importante: Solo puede contener elementos del mismo tipo</strong></p>
+<section id="array-vector-matrix-array" class="level4">
+<h4 class="anchored" data-anchor-id="array-vector-matrix-array">Array (vector, matrix, array)</h4>
+<p>Un array contiene un conjunto de elementos (números o caracteres) del mismo tipo en una estructura ordenada. En función de las dimensiones puede ser un vector (1 dimensión), una matriz (2 dimensiones) o un array (3 dimensiones).</p>
+<p><strong>Importante: Solo puede contener elementos del mismo tipo</strong></p>
+</section>
 <section id="vectores." class="level4">
 <h4 class="anchored" data-anchor-id="vectores.">Vectores.</h4>
 <div class="cell">
@@ -571,8 +587,8 @@ Attaching package: 'car'</code></pre>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  4  8 22 32 25</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>names<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">'Juan'</span>,<span class="st">'Luis'</span>,<span class="st">'Mónica'</span>,<span class="st">'Julia'</span>) <span class="co">#Genera un vector que contiene cadenas de caracteres.</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>names <span class="co">#llamamos al objeto para que lo devuelva.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>nombres<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">'Juan'</span>,<span class="st">'Luis'</span>,<span class="st">'Mónica'</span>,<span class="st">'Julia'</span>) <span class="co">#Genera un vector que contiene cadenas de caracteres.</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>nombres <span class="co">#llamamos al objeto para que lo devuelva.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Juan"   "Luis"   "Mónica" "Julia" </code></pre>
 </div>
@@ -582,12 +598,12 @@ Attaching package: 'car'</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "has_annotations" "names"           "x"               "y"              </code></pre>
+<pre><code>[1] "has_annotations" "nombres"         "x"               "y"              </code></pre>
 </div>
 </div>
 <p>Y eliminarlos también.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(names)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(nombres)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Comprobamos que lo ha eliminado.</p>
 <div class="cell">
@@ -720,7 +736,7 @@ Attaching package: 'car'</code></pre>
 [2,]  9.0    9  4.0</code></pre>
 </div>
 </div>
-<p>Como no son de uso habitual, no profundizaré en su uso. Como podéis ver, elementos del mismo tipo, en este caso numéricos, pero podrían ser caracteres (texto).</p>
+<p>Como no son de uso habitual, no profundizaré en su uso. Como podéis ver, elementos han de ser del mismo tipo, en este caso numéricos, pero podrían ser caracteres (texto).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>ar2 <span class="ot">&lt;-</span> <span class="fu">array</span>(<span class="fu">rep</span>(<span class="fu">c</span>(<span class="st">'red'</span>,<span class="st">'yellow'</span>,<span class="st">'green'</span>),<span class="dv">6</span>),<span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">2</span>))</span>
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>ar2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -743,9 +759,8 @@ Attaching package: 'car'</code></pre>
 <p>Soy consciente de que hasta aquí puede no haber visto la utilidad de lo expuesto, pero créeme que si entiende estos conceptos, te serán de utilidad cuando trabajes con datos.</p>
 <p>Así llegamos un objeto clave para el análisis de datos con R: <strong>el dataframe</strong>.</p>
 </section>
-</section>
-<section id="dataframe" class="level3">
-<h3 class="anchored" data-anchor-id="dataframe">Dataframe</h3>
+<section id="dataframe" class="level4">
+<h4 class="anchored" data-anchor-id="dataframe">Dataframe</h4>
 <p>Como ya comentamos se trata de una estructura con forma de matriz (todos los vectores han de tener la misma longitud), pero a diferencia de esta, <strong>un dataframe sí puede contener información de distinto tipo</strong>, fundamentalmente números (integer o numeric), de caracteres (texto), lógicos (TRUE/FALSE) y factores (este último será la forma en la que recomendaremos guardar variables categóricas y por su especificidad le dedicaremos un epígrafe propio).</p>
 <p>El dataframe es la estructura en la que vamos a almacenar nuestros datos, por lo que, aunque se pueden construir desde la combinación de matrices o vectores, lo frecuente es que los construyamos importando datos desde otros archivos (.csv, .xlsx,…).</p>
 <p>Al tratarse de una estructura matricial, le es aplicable lo que hemos comentado sobre la indexación de matrices, pero veremos que para <em>llamar</em> a subconjuntos dentro del dataframe, podemos utilizar otros recursos y no solo un vector de posiciones.</p>
@@ -859,8 +874,8 @@ CT       193   4256 341.0   774</code></pre>
 </div>
 <p>Una vez hemos visto lo básico sobre cómo manejarse con un dataframe, en la siguiente sesión aprenderemos a importar uno.</p>
 </section>
-<section id="listas." class="level3">
-<h3 class="anchored" data-anchor-id="listas.">Listas.</h3>
+<section id="listas." class="level4">
+<h4 class="anchored" data-anchor-id="listas.">Listas.</h4>
 <p>La <em>lista</em> es un objeto que a pesar de su utilidad cuesta comprender cuando estás empezando a trabajar con R. En cierto modo es un contenedor porque puede almacenar otros objetos de diferente tipo (vectores, arrays, dataframes, gráficos) en su interior. Además, en muchas funciones, alguno de los argumentos es de tipo lista y muchas otras devuelven objetos de tipo lista.</p>
 <p>¿Se puede vivir sin comprender qué es una lista en R? Sí, pero no manejarse algo con ellas limita mucho tu crecimiento posterior. En un curso de iniciación como este, solo pondré un ejemplo para ilustrar su funcionamiento, pero no te preocupes si en este momento no comprendes del todo su funcionamiento.</p>
 <p>En este ejemplo voy a generar un vector, una matriz, un dataframe y un gráfico<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> y los voy a incluir en una lista.</p>
@@ -890,7 +905,7 @@ CT       193   4256 341.0   774</code></pre>
  $ :'data.frame':   50 obs. of  3 variables:
  $ :List of 3
   ..- attr(*, "engineVersion")= int 16
-  ..- attr(*, "pid")= int 20773
+  ..- attr(*, "pid")= int 50154
   ..- attr(*, "Rversion")=Classes 'R_system_version', 'package_version', 'numeric_version'  hidden list of 1
   ..- attr(*, "load")= chr(0) 
   ..- attr(*, "attach")= chr(0) 
@@ -914,21 +929,21 @@ CT       193   4256 341.0   774</code></pre>
 <div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(lista1<span class="sc">$</span>mi_dataframe,<span class="at">n =</span> <span class="dv">10</span>) <span class="co">#Uso head con al argumento n=10 para que solo muestre las 10 primeras filas.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     id pas    sex
-1  1001 126 Hombre
-2  1002 111 Hombre
-3  1003 124 Hombre
-4  1004 123 Hombre
-5  1005 123  Mujer
-6  1006 113 Hombre
-7  1007 121 Hombre
-8  1008 124 Hombre
-9  1009 127 Hombre
+1  1001 108 Hombre
+2  1002 119 Hombre
+3  1003 122  Mujer
+4  1004 120  Mujer
+5  1005 126 Hombre
+6  1006 119 Hombre
+7  1007 126 Hombre
+8  1008 120  Mujer
+9  1009 118  Mujer
 10 1010 123  Mujer</code></pre>
 </div>
 </div>
 </section>
-<section id="funciones-un-par-de-palabras" class="level3">
-<h3 class="anchored" data-anchor-id="funciones-un-par-de-palabras">Funciones (un par de palabras)</h3>
+<section id="funciones-un-par-de-palabras" class="level4">
+<h4 class="anchored" data-anchor-id="funciones-un-par-de-palabras">Funciones (un par de palabras)</h4>
 <p>A lo largo de esta sesión, de manera más o menos consciente, habéis trabajado con funciones. Estas funciones están contenidas en las librerías que hemos mencionado al inicio de la sesión. Podemos generar nuestras propias funciones, pero en mi opinión es preferible introducir su creación en clases más avanzadas.</p>
 <p>Aunque es cierto que cuando eres capaz de crear una función entiendes mejor su funcionamiento, no es necesario saber hacerlo para utilizarlas correctamente, pero sí es necesario comentar, aunque sea brevemente, su estructura.</p>
 <p>Como hemos comentado, cuando la librería está cargada (recordad que se cargan con la función library<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>), basta con llamar a la función para ejecutarla. Como habéis visto, el nombre de la función va seguido de unos paréntesis que contienen lo que llamamos <em>“argumentos”</em>. Los argumentos nos permiten personalizar la función al objetivo. Cada argumento tiene un nombre, y en muchos casos un valor por defecto. En el fondo la forma de llamar (ejecutar) la función se parece estructuralmente a un vector en el que cada elemento tiene un nombre y el valor de cada argumento es utilizado para ejecutar la función.</p>
@@ -967,7 +982,7 @@ CT       193   4256 341.0   774</code></pre>
     }
     else all.names
 }
-&lt;bytecode: 0x55eb9bd62fd0&gt;
+&lt;bytecode: 0x55abc696eef0&gt;
 &lt;environment: namespace:base&gt;</code></pre>
 </div>
 </div>

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Jesús Esteban Hernández">
-<meta name="dcterms.date" content="2023-06-09">
+<meta name="dcterms.date" content="2022-02-12">
 
-<title>Bioestadística - PR0-Buenas prácticas en recopilación de datos</title>
+<title>Bioestadística - PR2-Importación de datos.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,26 +22,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -93,7 +108,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./PR_0_lect.html">Intro</a></li><li class="breadcrumb-item"><a href="./PR_0_lect.html">PR0-Buenas prácticas en recopilación de datos</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./PR_0_lect.html">Intro</a></li><li class="breadcrumb-item"><a href="./PR_2_lect.html">PR2-Importación de datos.</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -129,7 +144,7 @@ div.csl-indent {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./PR_0_lect.html" class="sidebar-item-text sidebar-link active">
+  <a href="./PR_0_lect.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PR0-Buenas prácticas en recopilación de datos</span></a>
   </div>
 </li>
@@ -141,8 +156,8 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./PR_2_lect.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">PR2-Importación y manipulación de datos.</span></a>
+  <a href="./PR_2_lect.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">PR2-Importación de datos.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -203,13 +218,11 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#criterios-de-buena-praxis-en-la-recopilación-de-datos." id="toc-criterios-de-buena-praxis-en-la-recopilación-de-datos." class="nav-link active" data-scroll-target="#criterios-de-buena-praxis-en-la-recopilación-de-datos.">Criterios de buena praxis en la recopilación de datos.</a>
+  <li><a href="#importación-de-datos-en-r." id="toc-importación-de-datos-en-r." class="nav-link active" data-scroll-target="#importación-de-datos-en-r.">Importación de datos en R.</a>
   <ul class="collapse">
-  <li><a href="#buenas-prácticas-sobre-gestión-de-datos." id="toc-buenas-prácticas-sobre-gestión-de-datos." class="nav-link" data-scroll-target="#buenas-prácticas-sobre-gestión-de-datos.">Buenas prácticas sobre gestión de datos.</a>
-  <ul class="collapse">
-  <li><a href="#recomendaciones." id="toc-recomendaciones." class="nav-link" data-scroll-target="#recomendaciones.">Recomendaciones.</a></li>
-  </ul></li>
-  <li><a href="#referencias." id="toc-referencias." class="nav-link" data-scroll-target="#referencias.">Referencias.</a></li>
+  <li><a href="#importación-desde-archivo-.csv-comma-separated-values." id="toc-importación-desde-archivo-.csv-comma-separated-values." class="nav-link" data-scroll-target="#importación-desde-archivo-.csv-comma-separated-values.">Importación desde archivo .csv (Comma Separated Values).</a></li>
+  <li><a href="#importación-desde-archivo-.xlsx-excel." id="toc-importación-desde-archivo-.xlsx-excel." class="nav-link" data-scroll-target="#importación-desde-archivo-.xlsx-excel.">Importación desde archivo .xlsx (Excel).</a></li>
+  <li><a href="#guardar-los-datos-para-la-siguiente-sesión." id="toc-guardar-los-datos-para-la-siguiente-sesión." class="nav-link" data-scroll-target="#guardar-los-datos-para-la-siguiente-sesión.">Guardar los datos para la siguiente sesión.</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -219,7 +232,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">PR0-Buenas prácticas en recopilación de datos</h1>
+<h1 class="title">PR2-Importación de datos.</h1>
 </div>
 
 
@@ -236,7 +249,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 9, 2023</p>
+      <p class="date">February 12, 2022</p>
     </div>
   </div>
   
@@ -319,136 +332,179 @@ tocify-header {
 
 
 </div>
-<p style="font-weight:600; font-size:36px">
-</p><p>Antes de comenzar…</p>
-<p></p>
-<p style="font-weight:450; font-size:24px">
-</p><p>La crisis de la reproducibilidad..</p>
-<p></p>
-<p>Aunque con frecuencia se utilizan como sinónimos, en investigación <strong>reproducibilidad</strong> y <strong>replicabilidad</strong> no significan lo mismo.</p>
-<blockquote class="blockquote">
-<p>Un estudio de investigación es <strong>reproducible</strong> si al repetir el análisis utilizando los mismos métodos de investigación (no solo el mismo análisis estadístico, pero también dicho análisis) <strong>sobre los mismos datos</strong> obtenemos los mismos resultados. Indica que el estudio fue realizado conforme se indica, incluyendo el análisis.</p>
-</blockquote>
-<blockquote class="blockquote">
-<p>Un estudio de investigación es <strong>replicable</strong> si repitiendo el proceso de investigación con la misma metodología, pero <strong>sobre nuevos datos</strong> obtenemos los mismos resultados, lo que indica que podemos confiar en sus conclusiones. Las razones para la falta de replicabilidad no son solo achacables</p>
-</blockquote>
-<ul>
-<li><strong>Reproducibilidad (reproducibility)</strong> y <strong>replicabilidad (replicability)</strong> condicionan la <strong>fiabilidad (reliability)</strong> de nuestros hallazgos.</li>
-<li>La <strong>reproducibilidad</strong> es condición necesaria pero no suficiente para la <strong>replicabilidad</strong>.</li>
-</ul>
+<p>Recuerda siempre cómo <em>“piensa”</em> R.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="pics/tips_repro_res_gandrupbook.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Imagen tomada de <span class="citation" data-cites="gandrudReproducibleResearchRStudio2020">Gandrud (<a href="#ref-gandrudReproducibleResearchRStudio2020" role="doc-biblioref">2020</a>)</span></figcaption>
+<p><img src="pics/como_piensa_R.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<figcaption class="figure-caption">Cómo piensa R</figcaption>
 </figure>
 </div>
-<p>Este documento no aborda aspectos como la instalación de R y RStudio, aspectos bien cubiertos en muchos otros recursos, algunos mencionados en la bibliografía.</p>
-<p>El siguiente esquema trata de representar el flujo de trabajo habitual en cualquier proyecto de data science independientemente de su envergadura.</p>
-<p>En la preparación de cualquier trabajo de investigación en el que nosotros nos encarguemos del análisis pasaremos por todas o casi todas estas fases.</p>
-<p>En sentido estricto, el análisis estadístico sería el ciclo Transform-Visualise-Model, pero es imposible llegar a estas fases si no se completan los pasos anteriores. De igual manera, sería extraño realizar un análisis para no comunicarlo, por lo que, aunque las siguientes notas no siguen exactamente este esquema, es importante tratar de pensar a qué fase corresponde todo lo que veremos en los seminarios prácticos, por lo que con frecuencia recurriremos a este esquema.</p>
+<section id="importación-de-datos-en-r." class="level1">
+<h1>Importación de datos en R.</h1>
+<p>En la sección anterior hemos visto lo fundamental sobre estructuras y hemos comentado las características de una estructura clave en el manejo de datos en R: <strong>dataframe</strong>.</p>
+<p>En esta práctica vamos a ver cómo importar datos utilizando diferentes funciones dependiendo del origen.</p>
+<p>Como comentábamos, la importación consiste en construir un objeto, generalmente de tipo dataframe a partir de un archivo externo.</p>
+<p>Para hacerlo necesitamos que el archivo externo tenga una estructura matricial (.xlsx) o que pueda convertirse en matricial (.csv) porque incluya caracteres de separación que le indiquen al programa que lo importa, en nuestro caso R, cuando cambiamos de columna o de fila.</p>
+<p>Se han incorporado muchas funciones a R que realizan la importación de forma casi automática, pero entender sus fundamentos puede ayudar a entender y resolver problemas de importación.</p>
+<p>Nos vamos a centrar en dos estructuras desde las que con frecuencia vamos a importar datos.</p>
+<section id="importación-desde-archivo-.csv-comma-separated-values." class="level3">
+<h3 class="anchored" data-anchor-id="importación-desde-archivo-.csv-comma-separated-values.">Importación desde archivo .csv (Comma Separated Values).</h3>
+<p>Una de las más sencillas si el archivo .csv está bien construido. Un archivo .csv no es más que un archivo de texto en el que el carácter coma (“,”) separa campos (variables) y el salgo de línea separa registros (individuos/elementos).</p>
+<blockquote class="blockquote">
+<p>En realidad cualquier estructura de texto que utilice un separador de campos (variables) y de registros (líneas) es susceptible de ser importada. R tiene una función muy básica para hacerlo (<em>read.table</em>), a la que le indicamos el carácter separador de campos (“,”, “;”,“/”,“/tab”…), si el archivo contiene encabezado (header), una primera línea en la que se almacenan los nombres de las variables, o el carácter que utiliza como separador decimal. En realidad tiene muchos otros argumentos, pero no son necesarios para realizar importaciones sencillas. Por ejemplo, la función que utilizaremos a continuación en realida es una adaptación de esta en la que por defecto se establece que el separador de campos es la coma (“,”), entre otros argumentos.</p>
+</blockquote>
+<p>Como comentábamos, el .csv es un formato estándar, que pesa poco y hay funciones diseñadas para leer este tipo de archivos.</p>
+<p>Entre los archivos de trabajo, hemos incluido un archivo llamado myiam2. Es un archivo con extensión .csv que contiene una base de datos de pacientes que habían padecido un infarto.</p>
+<p>Vamos a crear un dataframe importándola y como sabemos que se trata de un csv, vamos a utilizar al función <em>read.csv</em> del paquete <em>utils</em>. En este caso no hace falta cargarla porque este paquete se carga al iniciar R.</p>
+<p>Recuerde que hay que indicar el dirección en la que está el archivo. En este ejemplo, que explicaremos en clase, vamos a utilizar direccionamiento relativo al directorio en el que está el archivo desde mi directorio de trabajo.</p>
+<blockquote class="blockquote">
+<p>Importante. La dirección de las barras de dirección (las que separan directorios y subdirectorios) en R vienen del mundo UNIX (un sistema operativo diferente a Windows), por eso las barras se inclinan hacia el lado contrario. En clase veremos alguna función que facilita copiar y pegar las direcciones desde Windows adaptándolas al lenguaje de R. Se puede hacer invirtiendo las barras que vienen de Windows, o duplicándolas manteniendo la dirección.</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>iam<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">'data/myiam2.csv'</span>) <span class="co"># Utilizando relative path.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>La salidas de las funciones read suele ser un dataframe, y por ello podemos asignarlo directamente a un objeto, en el ejemplo el objeto (dataframe) llamado iam.</p>
+<p>Pedimos las primeras filas del dataframe.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iam)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Id      Age Sex Height Weight Smoke ami
+1  1 65.24100   1   1.62  74.56     0   0
+2  2 62.45461   0   1.56  60.89     0   0
+3  3 64.68328   0   1.69  74.20     0   0
+4  4 65.36045   0   1.34  43.92     0   0
+5  5 70.71094   0   1.81  80.86     1   0
+6  6 65.42030   0   1.78  80.56     0   0</code></pre>
+</div>
+</div>
+<p>También podemos pedir la estructura que nos da mucha información sobre el contenido del dataframe.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(iam)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   100 obs. of  7 variables:
+ $ Id    : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ Age   : num  65.2 62.5 64.7 65.4 70.7 ...
+ $ Sex   : int  1 0 0 0 0 0 1 0 0 0 ...
+ $ Height: num  1.62 1.56 1.69 1.34 1.81 1.78 1.79 1.44 1.56 1.87 ...
+ $ Weight: num  74.6 60.9 74.2 43.9 80.9 ...
+ $ Smoke : int  0 0 0 0 1 0 0 1 0 0 ...
+ $ ami   : int  0 0 0 0 0 0 0 1 0 0 ...</code></pre>
+</div>
+</div>
+<p>En realidad esta estructura también está visible si desplegamos el dataframe en la pestaña Environment, ventana data del panel superior derecho.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="pics/datascience_proj.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Data Science WorkFlow</figcaption>
+<p><img src="pics/iam_en_vent_data.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">vent_data</figcaption>
 </figure>
 </div>
-<section id="criterios-de-buena-praxis-en-la-recopilación-de-datos." class="level1">
-<h1>Criterios de buena praxis en la recopilación de datos.</h1>
-<p>Como veremos al termina la sección, no siempre contamos con la mejor solución a la hora de recoger los datos, pero esto no evita la necesidad de recogerlos con la mayor calidad posible, tarea que comienza incluso antes de su recogida. Siendo esencial, en esta sesión no hablaremos de la importancia de la definición adecuada de las variables, algunos de cuyos aspectos habrán sido ya comentados en las clases presenciales. En este texto solo daremos algunas pautas para mejorar su introducción en el primero soporte disponible antes a su importación al software de análisis.</p>
-<section id="buenas-prácticas-sobre-gestión-de-datos." class="level2">
-<h2 class="anchored" data-anchor-id="buenas-prácticas-sobre-gestión-de-datos.">Buenas prácticas sobre gestión de datos.</h2>
-<p>Poco textos sobre estadística incluyen un apartado sobre buenas prácticas en la introducción de datos, posiblemente porque asumen que el análisis empieza cuando los datos están <em>listos</em>.</p>
-<p>Sin embargo, cualquier persona dedicada al análisis de datos le dirá que el 75% de su trabajo consiste en <em>“limpiar los datos”</em> <span class="citation" data-cites="ruiz8020Data2017">Ruiz (<a href="#ref-ruiz8020Data2017" role="doc-biblioref">2017</a>)</span>. Aquí no estamos hablando del diseño del estudio, de la ausencia de sesgos, de la calidad (errores de medida) con la que se recogen las variables, o de si el tamaño muestral es o no el adecuado para nuestro fin. Hablamos de la cantidad de trabajo que hay que dedicar porque la base de datos que recibimos no sigue algunos principios básicos para poder analizarla con la mínima intervención.</p>
-<p>Nunca será suficiente el tiempo invertido a esta cuestión, por eso incluyo aquí algunos principios recogidos en este artículo <span class="citation" data-cites="wickhamTidyData2014">Wickham (<a href="#ref-wickhamTidyData2014" role="doc-biblioref">2014</a>)</span> y por supuesto en el libro <span class="citation" data-cites="grolemundDataScience2017">Grolemund and Wickham (<a href="#ref-grolemundDataScience2017" role="doc-biblioref">2017</a>)</span> de <a href="https://www.rstudio.com/authors/garrett-grolemund/">Grolemund</a> y <a href="https://hadley.nz/">Hadley Wickham</a>, cofundador y científico jefe de RStudio™ (ahora Posit™).</p>
-<section id="recomendaciones." class="level3">
-<h3 class="anchored" data-anchor-id="recomendaciones.">Recomendaciones.</h3>
-<p>Puede ampliar la información en el artículo de <span class="citation" data-cites="bromanDataOrganizationSpreadsheets2018">Broman and Woo (<a href="#ref-bromanDataOrganizationSpreadsheets2018" role="doc-biblioref">2018</a>)</span> y en la web de datacarpentry <span class="citation" data-cites="thecarpentriesFormattingProblemsData">The Carpentries (<a href="#ref-thecarpentriesFormattingProblemsData" role="doc-biblioref">n.d.</a>)</span>, donde encontrará multitud de consejos sobre cómo no utilizar las hojas de cálculo para recoger datos.</p>
-<section id="spreadsheets" class="level4">
-<h4 class="anchored" data-anchor-id="spreadsheets">Spreadsheets</h4>
-<ul>
-<li>Be consistent</li>
-<li>Choose good names for things</li>
-<li>Write dates as YYYY-MM-DD</li>
-<li>No empty cells</li>
-<li>Put just one thing in a cell</li>
-<li>Don’t use font color or highlighting as data</li>
-<li>Save the data as plain text files</li>
-</ul>
-<p>Carrie Wright, Shannon Ellis, Stephanie Hicks and Roger D. Peng. Tidyverse Skills for Data Science in R (Posición en Kindle124-126). leanpub.com.</p>
-<section id="be-consistent-concretamente" class="level5">
-<h5 class="anchored" data-anchor-id="be-consistent-concretamente"><em>Be consistent</em>, concretamente…</h5>
-<ul>
-<li>“Use consistent codes for categorical variables”-&gt; avoid m, male, Male, mal…</li>
-<li>“Use a consistent fixed code for any missing values.” -&gt; NA. Avoide numbers (999), do not insert notes.</li>
-<li>“Use consistent variable names”: Chol_1mth, then Chol_6mth…</li>
-<li>“Use consistent subject identifiers.”: (histclin, specimenid,…) KeyField!</li>
-<li>“Use a consistent data layout in multiple files.” : Evita trabajo extra al analista al combinarlos.</li>
-<li>“Use consistent file names.” Ejemplo “hiv_tfgm_2022_03_01.csv”, * “hiv_tfgm_2022_04_03.csv”</li>
-<li>“Use a consistent format for all dates” ‘YYYY-MM-DD’ ISO8601 (si otro, siempre igual. Cuidado con Excel)</li>
-<li>“Use consistent phrases in your notes” (Si las tienes, puede que quieras analizarla.</li>
-<li>“Be careful about extra spaces within cells.”</li>
-</ul>
+<p>Esta función nos informa del contenido del objeto. Al tratarse de un dataframe, nos muestra las variables, el tipo de dato que almacena cada una (en este ejemplo solo hay numérico y enteros) y las primeras observaciones. Es el primer punto de control en el que podemos observar si la importación ha ido como esperábamos.</p>
 </section>
-<section id="good-variable-names." class="level5">
-<h5 class="anchored" data-anchor-id="good-variable-names."><em>Good variable names</em>.</h5>
-<p><img src="pics/Recom1.png" class="img-fluid"></p>
+<section id="importación-desde-archivo-.xlsx-excel." class="level3">
+<h3 class="anchored" data-anchor-id="importación-desde-archivo-.xlsx-excel.">Importación desde archivo .xlsx (Excel).</h3>
+<p>El concepto de importación es el mismo independientemente de la fuente de los datos, pero las funciones a utilizar cambian para responder a las especificidades del tipo de archivo.</p>
+<p>R no cuenta con función propia para leer un archivo xlsx, pero otras librerías lo han incorporado.</p>
+<p>El siguiente ejemplo crea el mismo dataframe, pero en esta ocasión desde un archivo .xlsx. Utilizaremos la librería <em>readxl</em> (si no la tiene instalada, hágalo antes de ejecutar el siguiente código).</p>
+<p>Podríamos cargar la librería con library(readxl), pero vamos a aprovechar para mostrar cómo podemos llamar a una biblioteca (library) sin cargarla en memoria. La clave es anteceder el nombre de la función con el nombre de la biblioteca seguido de <em>“::”</em>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>iam2<span class="ot">&lt;-</span>readxl<span class="sc">::</span><span class="fu">read_xlsx</span>(<span class="st">'data/myiam3.xlsx'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Pedimos la estructura</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(iam2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>tibble [100 × 8] (S3: tbl_df/tbl/data.frame)
+ $ Id    : num [1:100] 1 2 3 4 5 6 7 8 9 10 ...
+ $ Sex   : chr [1:100] "1" "0" "0" "0" ...
+ $ Height: num [1:100] 1.62 1.56 1.69 1.34 1.81 1.78 1.79 1.44 1.56 1.87 ...
+ $ Weight: num [1:100] 74.6 60.9 74.2 43.9 80.9 ...
+ $ Smoke : chr [1:100] "0" "0" "0" "0" ...
+ $ Ami   : chr [1:100] "0" "0" "0" "0" ...
+ $ fecing: POSIXct[1:100], format: "2015-03-18 21:05:08" "2015-08-07 04:23:18" ...
+ $ fnac  : POSIXct[1:100], format: "1949-12-20 14:28:28" "1953-02-21 15:15:57" ...</code></pre>
+</div>
+</div>
+<p>En realidad vemos que la nueva base de datos no es exactamente la anterior. Las variables Sex, Smoke y Ami son de tipo carácter. Además no incluye la edad, pero sí la fecha de ingreso y la fecha de nacimiento.</p>
+<p>No es infrecuente que nuestros datos procedan de otro paquete estadístico o tipo de fichero. La biblioteca <em>foreign</em> incluye funciones para acometer esta tarea desde varias fuentes, incluyendo los tres software de análisis más habituales en nuestro contexto (SAS,SPSS,Stata).</p>
+<table class="table">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 78%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+<strong>Programa</strong><br>
+&nbsp;&nbsp;&nbsp;<br>
+</th>
+<th style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+<strong>Paquete</strong></th>
+<th style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+<strong>Función</strong></th>
+<th style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+<strong>Argumentos y opciones más&nbsp;&nbsp;&nbsp;frecuentes/predefinidas</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+SPSS</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+foreign</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+read.spss()</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+read.spss(file,&nbsp;&nbsp;&nbsp;use.value.labels = TRUE,&nbsp;&nbsp;&nbsp;to.data.frame = FALSE, max.value.labels = Inf, trim.factor.names = FALSE,&nbsp;&nbsp;&nbsp;trim_values = TRUE, reencode = NA, use.missings = to.data.frame)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+Stata</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+foreign</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+read.dta()</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+read.dta(file, convert.dates = TRUE,&nbsp;&nbsp;&nbsp;convert.factors = TRUE, missing.type = FALSE, convert.underscore = FALSE,&nbsp;&nbsp;&nbsp;warn.missing.labels = TRUE)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+SAS</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+haven</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+read_sas()</td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
+read_sas(data_file,&nbsp;&nbsp;&nbsp;catalog_file = NULL, encoding = NULL, cols_only = NULL)</td>
+</tr>
+</tbody>
+</table>
+<p>También existen paquetes más específicos para importar desde alguno de ellos, como <em>readstata13</em>, que permiten opciones adicionales.</p>
 </section>
-<section id="date-formatsnot-empty-cells." class="level5">
-<h5 class="anchored" data-anchor-id="date-formatsnot-empty-cells.">Date formats+not empty cells.</h5>
-<p><img src="pics/Recom2.png" class="img-fluid"></p>
-</section>
-<section id="just-one-thing-in-a-cell-dont-use-highlighting-as-data." class="level5">
-<h5 class="anchored" data-anchor-id="just-one-thing-in-a-cell-dont-use-highlighting-as-data.">Just one thing in a cell + don´t use highlighting as data.</h5>
-<p><img src="pics/Recom3.png" class="img-fluid"></p>
-</section>
-<section id="save-as-.csv." class="level5">
-<h5 class="anchored" data-anchor-id="save-as-.csv.">Save as <em>.csv</em>.</h5>
-<p>Aunque es posiblemente uno de los tipos de archivo más usados para recopilar datos, en realidad Excel está lejos de ser un programa diseñado para este fin, y recientemente el uso de su antiguo formato (.xls) produjo un importante error en Reino Unido al ser utilizado en la recopilación de datos durante la pandemia por SARS-Cov2 <span class="citation" data-cites="kelionExcelWhyUsing2020">Kelion (<a href="#ref-kelionExcelWhyUsing2020" role="doc-biblioref">2020</a>)</span>. Aunque la culpa no era de MSExcel, cuyo formato desde 2007 (.xlsx) no tiene la limitación del antiguo, lo cierto es que se suele recomendar evitar su uso para recopilar datos.</p>
-<p>Las bases de datos profesionales utilizan otros lenguajes y formatos. En R existen paquetes que permiten importar datos de la mayoría de estas fuentes, incluso de otros programas de análisis (SPSS, Stata, SAS…) pero, aunque no existiesen, cualquiera de ellos es capaz de exportarlos a un pequeño archivo .csv (comma separated values), que es a su vez importable desde todos ellos, también por R. Esto convierte al formato <strong>.csv</strong> en un formato frecuente en el intercambio de datos cuando no existe otro camino.</p>
-<p><img src="pics/Recom_save_as_csv.png" class="img-fluid"></p>
-<p>Aunque podríamos “crear” y editar los datos en el propio R<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, esto no es recomendable, entre otras cosas por la pérdida de reproducibilidad que conlleva, y por la ausencia de controles de entrada que sí están disponibles en las bases de datos que utilizan formularios que permiten asegurar cierta calidad durante su introducción, por ejemplo mediante listas desplegables que impiden introducir valores no incluidos en ellas o mediante filtros de valor que evitan introducir valores imposibles (p.ej. edad =999).</p>
-<p>Dicho esto, es obvio que muchos usuarios que sabrían rellenar una hoja de Excel (en el fondo una estructura tabular), no cuentan con conocimientos suficientes para crear una base de datos utilizando una estructura de tablas relacionadas, asociadas a formularios con controles de entrada sobre consultas SQL, y tampoco cuentan con apoyo técnico para poder hacerlo, por lo que muchos no tendrán más remedio que recurrir a archivos .xlsx. De hacerlo, <strong>es aún más importante seguir las recomendaciones anteriores</strong> de cara a facilitar su importación y reducir los errores de introducción.</p>
-<p>Por todo lo expuesto, lo más frecuente es que los datos crudos hayan sido recogidos en alguno de estos formatos (también en Excel), por nosotros mismos o por terceros, y por lo tanto debemos ser capaces de importarlos. Esto lo veremos en siguientes sesiones.</p>
-<p>Por último, algunos de los paquetes de R (ya veremos qué es esto) incluyen datos que permiten seguir los ejemplos. En la siguiente sesión también veremos cómo cargarlos (en este caso no es una importación) de forma sencilla.</p>
-</section>
-</section>
-</section>
-</section>
-<section id="referencias." class="level2">
+<section id="guardar-los-datos-para-la-siguiente-sesión." class="level2">
+<h2 class="anchored" data-anchor-id="guardar-los-datos-para-la-siguiente-sesión.">Guardar los datos para la siguiente sesión.</h2>
+<p>Una vez hemos trabajado los datos en R, no tendría mucho sentido volver a exportarlos con las nuevas variables creadas, salvo que deseemos enviárselo a alguien que no utilice R o no pueda importar su formato de datos.</p>
+<p>Podríamos guardar toda la imagen del espacio de trabajo (Workspace) y cargarla antes de trabajar con el nuevo dataframe en la siguiente sesión.</p>
+<p>Sin embargo, y aunque cueste entenderlo al principio, es preferible guadar la menor cantidad de objetos posibles y tratar de que sea el código el que lo construya cada vez.</p>
+<p>Si el objeto es muy grande o lleva mucho tiempo volver a generarlo con código, puede estar justificado guardar el o los objetos concretos.</p>
+<p>En el caso del dataframe tenemos una estructura de datos que le sirve a R para gestionar esta parte. Son los archivos .RDS.</p>
+<p>En este vínculo explican las dos opciones, pero de momento prefiero utilizar un archivo .RDS. Solo necesita un par de argumentos, el nombre del objeto dataframe que queremos guardar y el nombre del archivo en el que queremos guardarlo.</p>
+<p>El dataframe que nos interesa es iam, porque contiene las nuevas variables y las transformaciones que hemos realizado. Incluyo los nombres de los argumentos, pero dado que son los dos primeros en realidad no haría falta<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(<span class="at">object=</span>iam,<span class="at">file=</span><span class="st">'iam.RDS'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Es importante que aprendáis a salvarlo (ahora y tras el capítulo de manipulación de datos), porque lo utilizaremos en futuras sesiones.</p>
 
 
-
-
 </section>
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">Referencias.</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-bromanDataOrganizationSpreadsheets2018" class="csl-entry" role="listitem">
-Broman, Karl W., and Kara H. Woo. 2018. <span>“Data Organization in Spreadsheets.”</span> <em>The American Statistician</em> 72 (1): 2–10. <a href="https://doi.org/10.1080/00031305.2017.1375989">https://doi.org/10.1080/00031305.2017.1375989</a>.
-</div>
-<div id="ref-gandrudReproducibleResearchRStudio2020" class="csl-entry" role="listitem">
-Gandrud, Christopher. 2020. <em>Reproducible Research with R and RStudio</em>. Boca Raton, FL.
-</div>
-<div id="ref-grolemundDataScience2017" class="csl-entry" role="listitem">
-Grolemund, Garrett, and Hadley Wickham. 2017. <em>R for Data Science</em>. 1st edition. Sebastopol, CA: O’Reilly Media. <a href="http://r4ds.had.co.nz/">http://r4ds.had.co.nz/</a>.
-</div>
-<div id="ref-kelionExcelWhyUsing2020" class="csl-entry" role="listitem">
-Kelion, Leo. 2020. <span>“Excel: Why Using Microsoft’s Tool Caused Covid-19 Results to Be Lost.”</span> <em>BBC News</em>, October. <a href="https://www.bbc.com/news/technology-54423988">https://www.bbc.com/news/technology-54423988</a>.
-</div>
-<div id="ref-ruiz8020Data2017" class="csl-entry" role="listitem">
-Ruiz, Armand. 2017. <span>“The 80/20 Data Science Dilemma.”</span> <em>InfoWorld</em>. <a href="https://www.infoworld.com/article/3228245/the-80-20-data-science-dilemma.html">https://www.infoworld.com/article/3228245/the-80-20-data-science-dilemma.html</a>.
-</div>
-<div id="ref-thecarpentriesFormattingProblemsData" class="csl-entry" role="listitem">
-The Carpentries. n.d. <span>“Formatting Problems Data Organization in Spreadsheets for Ecologists.”</span> Accessed December 1, 2022. <a href="https://datacarpentry.org/spreadsheet-ecology-lesson/02-common-mistakes.html">https://datacarpentry.org/spreadsheet-ecology-lesson/02-common-mistakes.html</a>.
-</div>
-<div id="ref-wickhamTidyData2014" class="csl-entry" role="listitem">
-Wickham, Hadley. 2014. <span>“Tidy Data.”</span> <em>Journal of Statistical Software</em> 59 (September): 1–23. <a href="https://doi.org/10.18637/jss.v059.i10">https://doi.org/10.18637/jss.v059.i10</a>.
-</div>
-</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Con crear y editar, me estoy refiriendo a introducir y modificar los datos crudos, no a las modificaciones posteriores para construir nuevas variables mediante transformación, cálculo o recodificación<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Recordad lo que comenté en la sesión anterior sobre las <em>posiciones relevantes</em> al llamar a las funciones<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

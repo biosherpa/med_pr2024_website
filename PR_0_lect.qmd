@@ -1,5 +1,5 @@
 ---
-title: "Práctica 0 <br> Buenas prácticas en recopilación de datos"
+title: "PR0-Buenas prácticas en recopilación de datos"
 author: "Jesús Esteban Hernández"
 date: "6/09/2023"
 output:

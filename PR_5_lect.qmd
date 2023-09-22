@@ -1,5 +1,5 @@
 ---
-title: "Práctica 5 <br> Estadística inferencial. Comparación de proporciones."
+title: "PR5 <br> Estadística inferencial. Comparación de proporciones."
 author: "Jesús Esteban Hernández"
 date: "5/5/2023"
 output:

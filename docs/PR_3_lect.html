@@ -9,7 +9,7 @@
 <meta name="author" content="Jesús Esteban Hernández">
 <meta name="dcterms.date" content="2022-02-12">
 
-<title>Bioestadística - Práctica 3  Importación y manipulación de datos.</title>
+<title>Bioestadística - PR3-Manipulación de datos.</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,7 +110,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./PR_1_lect.html">Descriptiva</a></li><li class="breadcrumb-item"><a href="./PR_3_lect.html">Práctica 3 <br> Importación y manipulación de datos.</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./PR_0_lect.html">Intro</a></li><li class="breadcrumb-item"><a href="./PR_3_lect.html">PR3-Manipulación de datos.</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -147,7 +147,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./PR_0_lect.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 0 <br> Buenas prácticas en recopilación de datos</span></a>
+ <span class="menu-text">PR0-Buenas prácticas en recopilación de datos</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PR_1_lect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PR1-Introducción a R y RStudio.</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PR_2_lect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PR2-Importación de datos.</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./PR_3_lect.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">PR3-Manipulación de datos.</span></a>
   </div>
 </li>
       </ul>
@@ -163,14 +181,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./PR_1_lect.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica1 <br> Introducción a R y RStudio.</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./PR_3_lect.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Práctica 3 <br> Importación y manipulación de datos.</span></a>
+  <a href="./PR_4_lect.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PR4-Estadística Descriptiva.</span></a>
   </div>
 </li>
       </ul>
@@ -186,14 +198,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./PR_4_lect.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 4 <br> Estadística Descriptiva.</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./PR_5_lect.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Práctica 5 <br> Estadística inferencial. Comparación de proporciones.</span></a>
+ <span class="menu-text">PR5 <br> Estadística inferencial. Comparación de proporciones.</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -216,11 +222,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#importación-y-manipulación-de-datos-en-r." id="toc-importación-y-manipulación-de-datos-en-r." class="nav-link active" data-scroll-target="#importación-y-manipulación-de-datos-en-r.">Importación y manipulación de datos en R.</a>
   <ul class="collapse">
-  <li><a href="#importación-de-datos." id="toc-importación-de-datos." class="nav-link" data-scroll-target="#importación-de-datos.">Importación de datos.</a>
-  <ul class="collapse">
-  <li><a href="#importación-desde-archivo-.csv-comma-separated-values." id="toc-importación-desde-archivo-.csv-comma-separated-values." class="nav-link" data-scroll-target="#importación-desde-archivo-.csv-comma-separated-values.">Importación desde archivo .csv (Comma Separated Values).</a></li>
-  <li><a href="#importación-desde-archivo-.xlsx-excel." id="toc-importación-desde-archivo-.xlsx-excel." class="nav-link" data-scroll-target="#importación-desde-archivo-.xlsx-excel.">Importación desde archivo .xlsx (Excel).</a></li>
-  </ul></li>
+  <li><a href="#importación-de-datos." id="toc-importación-de-datos." class="nav-link" data-scroll-target="#importación-de-datos.">Importación de datos.</a></li>
   <li><a href="#manipulación-de-datos." id="toc-manipulación-de-datos." class="nav-link" data-scroll-target="#manipulación-de-datos.">Manipulación de datos.</a>
   <ul class="collapse">
   <li><a href="#operadores." id="toc-operadores." class="nav-link" data-scroll-target="#operadores.">Operadores.</a></li>
@@ -237,7 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Práctica 3 <br> Importación y manipulación de datos.</h1>
+<h1 class="title">PR3-Manipulación de datos.</h1>
 </div>
 
 
@@ -346,31 +348,17 @@ tocify-header {
 </div>
 <section id="importación-y-manipulación-de-datos-en-r." class="level1">
 <h1>Importación y manipulación de datos en R.</h1>
-<p>En la sección anterior hemos visto lo fundamental sobre estructuras y hemos comentado las características de una estructura clave en el manejo de datos en R: <strong>dataframe</strong>. En esta práctica vamos a ver cómo importar datos y como transformarlos usando <em>base R</em>. Al final comentaremos como hacer los mismo con <em>modern R</em>.</p>
+<p>En la sección anterior hemos visto cómo importar datos y como transformarlos usando <em>base R</em>.</p>
+<p>Si tienes problemas con la importación, echa un vistazo a las notas de la sesión anterior.</p>
+<p>En esta sesión aprenderemos a manipular los datos para, por ejemplo, construir nuevas variables a partir de las originales. Lo haremos utilizando <em>base R</em>, pero también incluiremos al final cómo hacer lo mismo con <em>modern R</em>.</p>
 <section id="importación-de-datos." class="level2">
 <h2 class="anchored" data-anchor-id="importación-de-datos.">Importación de datos.</h2>
-<p>Como comentábamos, la importación consiste en construir un objeto, generalmente de tipo dataframe a partir de un archivo externo.</p>
-<p>Para hacerlo necesitamos que el archivo externo tenga una estructura matricial (.xlsx) o que pueda convertirse en matricial (.csv) porque incluya caracteres de separación que le indiquen al programa que lo importa, en nuestro caso R, cuando cambiamos de columna o de fila.</p>
-<p>Se han incorporado muchas funciones a R que realizan la importación de forma casi automática, pero entender sus fundamentos puede ayudar a entender y resolver problemas de importación.</p>
-<p>Nos vamos a centrar en dos estructuras desde las que con frecuencia vamos a importar datos.</p>
-<section id="importación-desde-archivo-.csv-comma-separated-values." class="level3">
-<h3 class="anchored" data-anchor-id="importación-desde-archivo-.csv-comma-separated-values.">Importación desde archivo .csv (Comma Separated Values).</h3>
-<p>Una de las más sencillas si el archivo .csv está bien construido. Un archivo .csv no es más que un archivo de texto en el que el carácter coma (“,”) separa campos (variables) y el salgo de línea separa registros (individuos/elementos).</p>
-<blockquote class="blockquote">
-<p>En realidad cualquier estructura de texto que utilice un separador de campos (variables) y de registros (líneas) es susceptible de ser importada. R tiene una función muy básica para hacerlo (<em>read.table</em>), a la que le indicamos el carácter separador de campos (“,”, “;”,“/”,“/tab”…), si el archivo contiene encabezado (header), una primera línea en la que se almacenan los nombres de las variables, o el carácter que utiliza como separador decimal. En realidad tiene muchos otros argumentos, pero no son necesarios para realizar importaciones sencillas. Por ejemplo, la función que utilizaremos a continuación en realida es una adaptación de esta en la que por defecto se establece que el separador de campos es la coma (“,”), entre otros argumentos.</p>
-</blockquote>
-<p>Como comentábamos, el .csv es un formato estándar, que pesa poco y hay funciones diseñadas para leer este tipo de archivos.</p>
-<p>Entre los archivos de trabajo, hemos incluido un archivo llamado myiam2. Es un archivo con extensión .csv que contiene una base de datos de pacientes que habían padecido un infarto.</p>
-<p>Vamos a crear un dataframe importándola y como sabemos que se trata de un csv, vamos a utilizar al función <em>read.csv</em> del paquete <em>utils</em>. En este caso no hace falta cargarla porque este paquete se carga al iniciar R.</p>
-<p>Recuerde que hay que indicar el dirección en la que está el archivo. En este ejemplo, que explicaremos en clase, vamos a utilizar direccionamiento relativo al directorio en el que está el archivo desde mi directorio de trabajo.</p>
-<blockquote class="blockquote">
-<p>Importante. La dirección de las barras de dirección (las que separan directorios y subdirectorios) en R vienen del mundo UNIX (un sistema operativo diferente a Windows), por eso las barras se inclinan hacia el lado contrario. En clase veremos alguna función que facilita copiar y pegar las direcciones desde Windows adaptándolas al lenguaje de R. Se puede hacer invirtiendo las barras que vienen de Windows, o duplicándolas manteniendo la dirección.</p>
-</blockquote>
+<p>Antes de hablar de transformaciones, vamos a repasar las funciones que utilizamos para construir el dataframe.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>iam<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">'data/myiam2.csv'</span>) <span class="co"># Utilizando relative path.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>La salidas de las funciones read suele ser un dataframe, y por ello podemos asignarlo directamente a un objeto, en el ejemplo el objeto (dataframe) llamado iam.</p>
-<p>Pedimos las primeras filas del dataframe.</p>
+<p>Recuerde que la salidas de las funciones “read” suelen ser dataframes, y por ello podemos asignarlo directamente a un objeto, en el ejemplo el objeto (dataframe) llamado iam.</p>
+<p>Primeras filas del dataframe.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(iam)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -383,7 +371,7 @@ tocify-header {
 6  6 65.42030   0   1.78  80.56     0   0</code></pre>
 </div>
 </div>
-<p>También podemos pedir la estructura que nos da mucha información sobre el contenido del dataframe.</p>
+<p>Estructura del dataframe (en realidad la puedes ver en la pestaña Environment del panel superior derecho [en esta configuración])</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(iam)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -397,97 +385,13 @@ tocify-header {
  $ ami   : int  0 0 0 0 0 0 0 1 0 0 ...</code></pre>
 </div>
 </div>
-<p>En realidad esta estructura también está visible si desplegamos el dataframe en la pestaña Environment, ventana data del panel superior derecho.</p>
+<p>Recuerde que esta estructura también está visible si desplegamos el dataframe en la pestaña Environment, ventana data del panel superior derecho.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="pics/iam_en_vent_data.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">vent_data</figcaption>
 </figure>
 </div>
-<p>Esta función nos informa del contenido del objeto. Al tratarse de un dataframe, nos muestra las variables, el tipo de dato que almacena cada una (en este ejemplo solo hay numérico y enteros) y las primeras observaciones. Es el primer punto de control en el que podemos observar si la importación ha ido como esperábamos.</p>
-</section>
-<section id="importación-desde-archivo-.xlsx-excel." class="level3">
-<h3 class="anchored" data-anchor-id="importación-desde-archivo-.xlsx-excel.">Importación desde archivo .xlsx (Excel).</h3>
-<p>El concepto de importación es el mismo independientemente de la fuente de los datos, pero las funciones a utilizar cambian para responder a las especificidades del tipo de archivo.</p>
-<p>R no cuenta con función propia para leer un archivo xlsx, pero otras librerías lo han incorporado.</p>
-<p>El siguiente ejemplo crea el mismo dataframe, pero en esta ocasión desde un archivo .xlsx. Utilizaremos la librería <em>readxl</em> (si no la tiene instalada, hágalo antes de ejecutar el siguiente código).</p>
-<p>Podríamos cargar la librería con library(readxl), pero vamos a aprovechar para mostrar cómo podemos llamar a una biblioteca (library) sin cargarla en memoria. La clave es anteceder el nombre de la función con el nombre de la biblioteca seguido de <em>“::”</em>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>iam2<span class="ot">&lt;-</span>readxl<span class="sc">::</span><span class="fu">read_xlsx</span>(<span class="st">'data/myiam3.xlsx'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Pedimos la estructura</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(iam2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>tibble [100 × 8] (S3: tbl_df/tbl/data.frame)
- $ Id    : num [1:100] 1 2 3 4 5 6 7 8 9 10 ...
- $ Sex   : chr [1:100] "1" "0" "0" "0" ...
- $ Height: num [1:100] 1.62 1.56 1.69 1.34 1.81 1.78 1.79 1.44 1.56 1.87 ...
- $ Weight: num [1:100] 74.6 60.9 74.2 43.9 80.9 ...
- $ Smoke : chr [1:100] "0" "0" "0" "0" ...
- $ Ami   : chr [1:100] "0" "0" "0" "0" ...
- $ fecing: POSIXct[1:100], format: "2015-03-18 21:05:08" "2015-08-07 04:23:18" ...
- $ fnac  : POSIXct[1:100], format: "1949-12-20 14:28:28" "1953-02-21 15:15:57" ...</code></pre>
-</div>
-</div>
-<p>En realidad vemos que la nueva base de datos no es exactamente la anterior. Las variables Sex, Smoke y Ami son de tipo carácter. Además no incluye la edad, pero sí la fecha de ingreso y la fecha de nacimiento.</p>
-<p>No es infrecuente que nuestros datos procedan de otro paquete estadístico o tipo de fichero. La biblioteca <em>foreign</em> incluye funciones para acometer esta tarea desde varias fuentes, incluyendo los tres software de análisis más habituales en nuestro contexto (SAS,SPSS,Stata).</p>
-<table class="table">
-<colgroup>
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 6%">
-<col style="width: 78%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-<strong>Programa</strong><br>
-&nbsp;&nbsp;&nbsp;<br>
-</th>
-<th style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-<strong>Paquete</strong></th>
-<th style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-<strong>Función</strong></th>
-<th style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-<strong>Argumentos y opciones más&nbsp;&nbsp;&nbsp;frecuentes/predefinidas</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-SPSS</td>
-<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-foreign</td>
-<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-read.spss()</td>
-<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-read.spss(file,&nbsp;&nbsp;&nbsp;use.value.labels = TRUE,&nbsp;&nbsp;&nbsp;to.data.frame = FALSE, max.value.labels = Inf, trim.factor.names = FALSE,&nbsp;&nbsp;&nbsp;trim_values = TRUE, reencode = NA, use.missings = to.data.frame)</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-Stata</td>
-<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-foreign</td>
-<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-read.dta()</td>
-<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-read.dta(file, convert.dates = TRUE,&nbsp;&nbsp;&nbsp;convert.factors = TRUE, missing.type = FALSE, convert.underscore = FALSE,&nbsp;&nbsp;&nbsp;warn.missing.labels = TRUE)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-SAS</td>
-<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-haven</td>
-<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-read_sas()</td>
-<td style="text-align: left;">&nbsp;&nbsp;&nbsp;<br>
-read_sas(data_file,&nbsp;&nbsp;&nbsp;catalog_file = NULL, encoding = NULL, cols_only = NULL)</td>
-</tr>
-</tbody>
-</table>
-<p>También existen paquetes más específicos para importar desde alguno de ellos, como <em>readstata13</em>, que permiten opciones adicionales.</p>
-</section>
 </section>
 <section id="manipulación-de-datos." class="level2">
 <h2 class="anchored" data-anchor-id="manipulación-de-datos.">Manipulación de datos.</h2>
@@ -656,12 +560,12 @@ read_sas(data_file,&nbsp;&nbsp;&nbsp;catalog_file = NULL, encoding = NULL, cols_
 <p>La función cut es muy útila para generar una variable categórica a partir de una cuantitativa discreta o continua. Solo necesitas que le entregemos el vector a cortar y los puntos de corte. Veamos un par de ejemplos.</p>
 <p>Construiremos grupos de edad e intervalos de 10 años. El máximo de esta variable es 70.71 y el mínimo es 59.5, así pues nos hacen falta puntos de corte entre ambos valores con amplitud de 10 años.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>iam<span class="sc">$</span>age5<span class="ot">&lt;-</span><span class="fu">cut</span>(iam<span class="sc">$</span>Age,<span class="fu">seq</span>(<span class="dv">55</span>,<span class="dv">75</span>,<span class="dv">10</span>),<span class="at">include.lowest =</span> T,<span class="at">right =</span> T) <span class="co"># la función seq nos facilita la tarea de construir el vector de puntos de corte.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>iam<span class="sc">$</span>age5<span class="ot">&lt;-</span><span class="fu">cut</span>(iam<span class="sc">$</span>Age,<span class="fu">seq</span>(<span class="dv">55</span>,<span class="dv">75</span>,<span class="dv">10</span>),<span class="at">include.lowest =</span> T,<span class="at">right =</span> T) <span class="co"># la función seq nos facilita la tarea de construir el vector de puntos de corte.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>La propia función genera un factor (ya hablaremos de este tipo de objetos que servirán para almacenar variables categóricas )</p>
 <p>Podemos construir una tabla para comprobar la distribución de la nueva variable categórica.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(iam<span class="sc">$</span>age5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(iam<span class="sc">$</span>age5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 [55,65] (65,75] 
@@ -678,9 +582,9 @@ read_sas(data_file,&nbsp;&nbsp;&nbsp;catalog_file = NULL, encoding = NULL, cols_
 <p>En el dataframe <em>iam</em> se incluyen las variables peso y altura. Vamos a construir el Índice de Masa Corporal.</p>
 <p><span class="math display">\[IMC=\frac{Peso (kg)}{Altura(m)^2}\]</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>iam<span class="sc">$</span>bmi<span class="ot">&lt;-</span>iam<span class="sc">$</span>Weight<span class="sc">/</span>iam<span class="sc">$</span>Height<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>iam<span class="sc">$</span>bmi<span class="ot">&lt;-</span>iam<span class="sc">$</span>Weight<span class="sc">/</span>iam<span class="sc">$</span>Height<span class="sc">^</span><span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Como se puede observar, para incluirla en el dataframe, hemos de indicarlo utilizando el nombre del mismo seguido de $ y el nombre que queremos dar a la nueva variable, en este caso <em>bmi</em>.</p>
+<p>Como se puede observar, para incluirla en el dataframe, hemos de indicárselo utilizando el nombre del mismo seguido de $ y el nombre que queremos dar a la nueva variable, en este caso <em>bmi</em>.</p>
 </section>
 <section id="recodificación." class="level4">
 <h4 class="anchored" data-anchor-id="recodificación.">Recodificación.</h4>
@@ -696,13 +600,13 @@ read_sas(data_file,&nbsp;&nbsp;&nbsp;catalog_file = NULL, encoding = NULL, cols_
 <li>Construcción de un vector numérico.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rep</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">1</span>,<span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">rep</span>(<span class="dv">0</span><span class="sc">:</span><span class="dv">1</span>,<span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Conversión del vector en un factor, sin decirle nada más.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>sex<span class="ot">&lt;-</span><span class="fu">factor</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>sex<span class="ot">&lt;-</span><span class="fu">factor</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li><p>Al utilizar la función factor, R lee el vector que recibe y, si no le decimos otra cosa, identifica los valores diferentes y los ordena en orden alfanumérico.</p></li>
@@ -714,13 +618,13 @@ read_sas(data_file,&nbsp;&nbsp;&nbsp;catalog_file = NULL, encoding = NULL, cols_
 <p>El vector sex, creado con el código anterior, tiene dos niveles, 1 y 2, pero las etiquetas que fueron asignadas como indiqué, son “0” y “1”, valores originales del vector. Al no decirle lo contrario, usó el orden alfanumérico, por eso el 0 se asigna al primer nivel y el 1 al segundo nivel.</p>
 <p>Si queremos ver los auténticos niveles que contiens podemos forzar una conversión de tipo de la siguiente manera:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>sex</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>sex</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1
 [39] 0 1 0 1 0 1 0 1 0 1 0 1
 Levels: 0 1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(sex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(sex)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2
 [39] 1 2 1 2 1 2 1 2 1 2 1 2</code></pre>
@@ -731,10 +635,10 @@ Levels: 0 1</code></pre>
 <p>Para indicarle las etiquetas, basta con meter un vector con las etiquetas en el argumento <em>labels.</em></p>
 <p>En este ejemplo asumimos que el 0 es el valor con el que en la base de datos original se codificó Hombre y 1 el valor con el que se codificó Mujer.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>sex2<span class="ot">&lt;-</span><span class="fu">factor</span>(x,<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'Hombre'</span>,<span class="st">'Mujer'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>sex2<span class="ot">&lt;-</span><span class="fu">factor</span>(x,<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'Hombre'</span>,<span class="st">'Mujer'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>sex2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>sex2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] Hombre Mujer  Hombre Mujer  Hombre Mujer  Hombre Mujer  Hombre Mujer 
 [11] Hombre Mujer  Hombre Mujer  Hombre Mujer  Hombre Mujer  Hombre Mujer 
@@ -743,7 +647,7 @@ Levels: 0 1</code></pre>
 [41] Hombre Mujer  Hombre Mujer  Hombre Mujer  Hombre Mujer  Hombre Mujer 
 Levels: Hombre Mujer</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(sex2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(sex2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2
 [39] 1 2 1 2 1 2 1 2 1 2 1 2</code></pre>
@@ -756,16 +660,16 @@ Levels: Hombre Mujer</code></pre>
 <p>La posición que asignemos a los niveles tendrá importancia en la construcción de los modelos, puesto que, aunque se puede cambiar, la comparación que se establece por defecto es contra el nivel más bajo, que funcionará como nivel de referencia.</p>
 </blockquote>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>sex3<span class="ot">&lt;-</span><span class="fu">factor</span>(x,<span class="at">levels=</span><span class="fu">c</span>(<span class="st">"1"</span>,<span class="st">"0"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>sex3<span class="ot">&lt;-</span><span class="fu">factor</span>(x,<span class="at">levels=</span><span class="fu">c</span>(<span class="st">"1"</span>,<span class="st">"0"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>sex3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>sex3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1
 [39] 0 1 0 1 0 1 0 1 0 1 0 1
 Levels: 1 0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(sex3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(sex3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1
 [39] 2 1 2 1 2 1 2 1 2 1 2 1</code></pre>
@@ -773,8 +677,8 @@ Levels: 1 0</code></pre>
 </div>
 <p>Ahora los ceros (hombres), han sido asignados al nivel 2 y los unos (mujeres al nivel 1). Por supuesto podríamos haber colocado nuestras etiquetas en la propia creación, pero debemos tener en cuenta que hemos impuesto un nuevo orden a los niveles.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>sex4<span class="ot">&lt;-</span><span class="fu">factor</span>(x,<span class="at">levels=</span><span class="fu">c</span>(<span class="st">"1"</span>,<span class="st">"0"</span>),<span class="at">labels=</span><span class="fu">c</span>(<span class="st">'Women'</span>,<span class="st">'Men'</span>))</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>sex4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>sex4<span class="ot">&lt;-</span><span class="fu">factor</span>(x,<span class="at">levels=</span><span class="fu">c</span>(<span class="st">"1"</span>,<span class="st">"0"</span>),<span class="at">labels=</span><span class="fu">c</span>(<span class="st">'Women'</span>,<span class="st">'Men'</span>))</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>sex4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] Men   Women Men   Women Men   Women Men   Women Men   Women Men   Women
 [13] Men   Women Men   Women Men   Women Men   Women Men   Women Men   Women
@@ -783,7 +687,7 @@ Levels: 1 0</code></pre>
 [49] Men   Women
 Levels: Women Men</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(sex4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(sex4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1 2 1
 [39] 2 1 2 1 2 1 2 1 2 1 2 1</code></pre>
@@ -793,15 +697,15 @@ Levels: Women Men</code></pre>
 <p>¿Cómo saber los niveles que tiene un factor?</p>
 <p>Mediante la función levels.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(sex4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(sex4)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Women" "Men"  </code></pre>
 </div>
 </div>
 <p>Como se puede observar, esta función devuelve un vector. Pues bien, podemos modificar dicho vector para cambiar las etiquetas del factor, siempre que tengamos claro el orden de los niveles.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(sex4)<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">'Mujer'</span>,<span class="st">'Hombre'</span>)</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>sex4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(sex4)<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">'Mujer'</span>,<span class="st">'Hombre'</span>)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>sex4</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] Hombre Mujer  Hombre Mujer  Hombre Mujer  Hombre Mujer  Hombre Mujer 
 [11] Hombre Mujer  Hombre Mujer  Hombre Mujer  Hombre Mujer  Hombre Mujer 
@@ -816,14 +720,14 @@ Levels: Mujer Hombre</code></pre>
 <p>Sí así fuera, basta con utilizar la función factor par construir el vector. Veamos un ejemplo.</p>
 <p>Construiremos un vector de tipo <em>character</em>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>nse<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">'NSE1'</span>,<span class="dv">10</span>),<span class="fu">rep</span>(<span class="st">'NSE2'</span>,<span class="dv">4</span>),<span class="fu">rep</span>(<span class="st">'NSE3'</span>,<span class="dv">12</span>),<span class="fu">rep</span>(<span class="st">'NSE4'</span>,<span class="dv">5</span>))</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="co"># hay formas más elegantes de construir este vector, pero hacen falta funciones que aún no hemos visto.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>nse<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">'NSE1'</span>,<span class="dv">10</span>),<span class="fu">rep</span>(<span class="st">'NSE2'</span>,<span class="dv">4</span>),<span class="fu">rep</span>(<span class="st">'NSE3'</span>,<span class="dv">12</span>),<span class="fu">rep</span>(<span class="st">'NSE4'</span>,<span class="dv">5</span>))</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="co"># hay formas más elegantes de construir este vector, pero hacen falta funciones que aún no hemos visto.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Como se puede ver, las palabras contenidas en el vector están entre comillas, lo que señala que se trata de cadenas de caracteres.</p>
 <p>Conversión en factor asumiendo el orden alfanumérico de los valores diferentes dentro del vector.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>nse_f<span class="ot">&lt;-</span><span class="fu">factor</span>(nse)</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>nse_f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>nse_f<span class="ot">&lt;-</span><span class="fu">factor</span>(nse)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>nse_f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE2 NSE2 NSE2 NSE2 NSE3
 [16] NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE4 NSE4 NSE4 NSE4
@@ -834,8 +738,8 @@ Levels: NSE1 NSE2 NSE3 NSE4</code></pre>
 <p>Como se puede observar, la conersión en factor hace que tenga niveles (Levels: NSE1 NSE2 NSE3 NSE4) cuyo orden ha sido establecido por el orden alfanumérico de las cadenas de caracteres que contenía el vector.</p>
 <p>Para que se entienda cómo actúa la conversión, vamos a construir un vector parecido pero en el que una de las cadenas no sigue el patrón NSE.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>nse2<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">'NSE1'</span>,<span class="dv">10</span>),<span class="fu">rep</span>(<span class="st">'SNE2'</span>,<span class="dv">4</span>),<span class="fu">rep</span>(<span class="st">'NSE3'</span>,<span class="dv">12</span>),<span class="fu">rep</span>(<span class="st">'NSE4'</span>,<span class="dv">5</span>))</span>
-<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>nse2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>nse2<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="fu">rep</span>(<span class="st">'NSE1'</span>,<span class="dv">10</span>),<span class="fu">rep</span>(<span class="st">'SNE2'</span>,<span class="dv">4</span>),<span class="fu">rep</span>(<span class="st">'NSE3'</span>,<span class="dv">12</span>),<span class="fu">rep</span>(<span class="st">'NSE4'</span>,<span class="dv">5</span>))</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>nse2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "NSE1" "NSE1" "NSE1" "NSE1" "NSE1" "NSE1" "NSE1" "NSE1" "NSE1" "NSE1"
 [11] "SNE2" "SNE2" "SNE2" "SNE2" "NSE3" "NSE3" "NSE3" "NSE3" "NSE3" "NSE3"
@@ -846,8 +750,8 @@ Levels: NSE1 NSE2 NSE3 NSE4</code></pre>
 <p>Este vector es parecido al nse, solo cambia la cadena de 4 elementos, que ahora es SNE2 en vez de NSE2.</p>
 <p>Al transformarlo en factor:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>nse2_f<span class="ot">&lt;-</span><span class="fu">factor</span>(nse2)</span>
-<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>nse2_f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>nse2_f<span class="ot">&lt;-</span><span class="fu">factor</span>(nse2)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>nse2_f</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 SNE2 SNE2 SNE2 SNE2 NSE3
 [16] NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE4 NSE4 NSE4 NSE4
@@ -859,8 +763,8 @@ Levels: NSE1 NSE3 NSE4 SNE2</code></pre>
 <p>Esto no afecta a la información en sí misma, pues la etiqueta signada al nivel 4 estará allá donde el vector de caracteres incluyera “SNE2”.</p>
 <p>En realidad podríamos haberlo evitado indicando la colocación de los niveles.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>nse2_f2<span class="ot">&lt;-</span><span class="fu">factor</span>(nse2,<span class="at">levels =</span> <span class="fu">c</span>(<span class="st">'NSE1'</span>,<span class="st">'SNE2'</span>,<span class="st">'NSE3'</span>,<span class="st">'NSE4'</span>))</span>
-<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>nse2_f2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>nse2_f2<span class="ot">&lt;-</span><span class="fu">factor</span>(nse2,<span class="at">levels =</span> <span class="fu">c</span>(<span class="st">'NSE1'</span>,<span class="st">'SNE2'</span>,<span class="st">'NSE3'</span>,<span class="st">'NSE4'</span>))</span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>nse2_f2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 SNE2 SNE2 SNE2 SNE2 NSE3
 [16] NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE4 NSE4 NSE4 NSE4
@@ -874,39 +778,39 @@ Levels: NSE1 SNE2 NSE3 NSE4</code></pre>
 <p>La recodificación es fácil cuando se hace sobre el factor, porque basta con reasignar las etiquetas a los niveles. Esta relación entre <em>levels</em> y <em>labels</em> es la que, en mi opinión, genera más confusión a la hora de entender los factores.</p>
 <p>Vamos a recodificar el vector nse_f (el primer factor que generamos) agrupando los niveles 2 y 3.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Crearemos una copia para no perder el anterior y poder comparar los efectos.</span></span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>nse_f_rec<span class="ot">&lt;-</span>nse_f </span>
-<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>nse_f_rec <span class="co">#Vemos que es el mismo vector.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Crearemos una copia para no perder el anterior y poder comparar los efectos.</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>nse_f_rec<span class="ot">&lt;-</span>nse_f </span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>nse_f_rec <span class="co">#Vemos que es el mismo vector.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE2 NSE2 NSE2 NSE2 NSE3
 [16] NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE4 NSE4 NSE4 NSE4
 [31] NSE4
 Levels: NSE1 NSE2 NSE3 NSE4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(nse_f_rec) <span class="co">#Preguntamos por los niveles.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(nse_f_rec) <span class="co">#Preguntamos por los niveles.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "NSE1" "NSE2" "NSE3" "NSE4"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(nse_f_rec) <span class="co"># visualizamos los niveles subyacentes.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(nse_f_rec) <span class="co"># visualizamos los niveles subyacentes.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 1 1 1 1 1 1 1 1 1 1 2 2 2 2 3 3 3 3 3 3 3 3 3 3 3 3 4 4 4 4 4</code></pre>
 </div>
 </div>
 <p>Cambiamos los niveles actuando sobre las etiquetas de nivel. Confunde, porque parece que solo estamos cambiando la etiqueta y que por debajo permanecerán los cuatro niveles, pero…</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(nse_f_rec)<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">'NSE1'</span>,<span class="st">'NSE2_3'</span>,<span class="st">'NSE2_3'</span>,<span class="st">'NSE4'</span>)  </span>
-<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(nse_f_rec) <span class="co"># No solo son tres etiquetas.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(nse_f_rec)<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="st">'NSE1'</span>,<span class="st">'NSE2_3'</span>,<span class="st">'NSE2_3'</span>,<span class="st">'NSE4'</span>)  </span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a><span class="fu">levels</span>(nse_f_rec) <span class="co"># No solo son tres etiquetas.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "NSE1"   "NSE2_3" "NSE4"  </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(nse_f_rec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">as.numeric</span>(nse_f_rec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 3 3 3</code></pre>
 </div>
 </div>
 <p>Podemos ver cómo ha ido la recodificación construyendo una tabla de contingencia con los dos vectores.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(nse_f_rec,nse_f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(nse_f_rec,nse_f)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>         nse_f
 nse_f_rec NSE1 NSE2 NSE3 NSE4
@@ -921,8 +825,8 @@ nse_f_rec NSE1 NSE2 NSE3 NSE4
 <p>Por un método parecido podemos reordenar los niveles para que el nivel de referencia sea el que deseemos.</p>
 <p>En el siguiente ejemplo vamos a conseguir que sea el NSE4 el nivel de referencia.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>nse_f_rec<span class="ot">&lt;-</span><span class="fu">relevel</span>(nse_f_rec,<span class="at">ref =</span> <span class="st">'NSE4'</span>) <span class="co"># Para entregárselo, de nuevo le indicamos la etiqueta de nivel.</span></span>
-<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>nse_f_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>nse_f_rec<span class="ot">&lt;-</span><span class="fu">relevel</span>(nse_f_rec,<span class="at">ref =</span> <span class="st">'NSE4'</span>) <span class="co"># Para entregárselo, de nuevo le indicamos la etiqueta de nivel.</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>nse_f_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] NSE1   NSE1   NSE1   NSE1   NSE1   NSE1   NSE1   NSE1   NSE1   NSE1  
 [11] NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3
@@ -933,7 +837,7 @@ Levels: NSE4 NSE1 NSE2_3</code></pre>
 </div>
 <p>En realidad podríamos haberlo conseguido con la propia función factor.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">factor</span>(nse_f_rec,<span class="at">levels=</span><span class="fu">c</span>(<span class="st">'NSE1'</span>,<span class="st">'NSE2_3'</span>,<span class="st">'NSE4'</span>)) <span class="co"># no lo asignamos al objeto para poder seguir utilizándolo posteriormente.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">factor</span>(nse_f_rec,<span class="at">levels=</span><span class="fu">c</span>(<span class="st">'NSE1'</span>,<span class="st">'NSE2_3'</span>,<span class="st">'NSE4'</span>)) <span class="co"># no lo asignamos al objeto para poder seguir utilizándolo posteriormente.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] NSE1   NSE1   NSE1   NSE1   NSE1   NSE1   NSE1   NSE1   NSE1   NSE1  
 [11] NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3
@@ -944,7 +848,7 @@ Levels: NSE1 NSE2_3 NSE4</code></pre>
 </div>
 <p>Es importante introducir bien las etiquetas porque de lo contario asignara NA (missing). Un ejemplo introduciendo un error en la primera etiqueta.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">factor</span>(nse_f_rec,<span class="at">levels=</span><span class="fu">c</span>(<span class="st">'NSE'</span>,<span class="st">'NSE2_3'</span>,<span class="st">'NSE4'</span>)) <span class="co"># no lo asignamos al objeto para poder seguir utilizándolo posteriormente.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">factor</span>(nse_f_rec,<span class="at">levels=</span><span class="fu">c</span>(<span class="st">'NSE'</span>,<span class="st">'NSE2_3'</span>,<span class="st">'NSE4'</span>)) <span class="co"># no lo asignamos al objeto para poder seguir utilizándolo posteriormente.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;   &lt;NA&gt;  
 [11] NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3 NSE2_3
@@ -957,18 +861,18 @@ Levels: NSE NSE2_3 NSE4</code></pre>
 <p>En cualquier caso no es esencial y se puede hacer que la función lo entienda como ordinal utilizando otras opciones al construir el modelo.</p>
 <p>Como lo hemos mencionado, insertaré aquí un ejemplo de esta función.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ordered</span>(nse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ordered</span>(nse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE2 NSE2 NSE2 NSE2 NSE3
 [16] NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE4 NSE4 NSE4 NSE4
 [31] NSE4
 Levels: NSE1 &lt; NSE2 &lt; NSE3 &lt; NSE4</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a>nse_of<span class="ot">&lt;-</span><span class="fu">factor</span>(nse,<span class="at">ordered =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a>nse_of<span class="ot">&lt;-</span><span class="fu">factor</span>(nse,<span class="at">ordered =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Como se observa, Levels indica la relación entre niveles, y podemos utilizarlos para darle la vuelta a la relación de los niveles del factor.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">factor</span>(nse,<span class="at">levels=</span><span class="fu">c</span>(<span class="st">'NSE4'</span>,<span class="st">'NSE3'</span>,<span class="st">'NSE2'</span>,<span class="st">'NSE1'</span>),<span class="at">ordered =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">factor</span>(nse,<span class="at">levels=</span><span class="fu">c</span>(<span class="st">'NSE4'</span>,<span class="st">'NSE3'</span>,<span class="st">'NSE2'</span>,<span class="st">'NSE1'</span>),<span class="at">ordered =</span> T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE1 NSE2 NSE2 NSE2 NSE2 NSE3
 [16] NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE3 NSE4 NSE4 NSE4 NSE4
@@ -991,7 +895,7 @@ Levels: NSE4 &lt; NSE3 &lt; NSE2 &lt; NSE1</code></pre>
 <p>En este vínculo explican las dos opciones, pero de momento prefiero utilizar un archivo .RDS. Solo necesita un par de argumentos, el nombre del objeto dataframe que queremos guardar y el nombre del archivo en el que queremos guardarlo.</p>
 <p>El dataframe que nos interesa es iam, porque contiene las nuevas variables y las transformaciones que hemos realizado. Incluyo los nombres de los argumentos, pero dado que son los dos primeros en realidad no haría falta<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(<span class="at">object=</span>iam,<span class="at">file=</span><span class="st">'iam.RDS'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">saveRDS</span>(<span class="at">object=</span>iam,<span class="at">file=</span><span class="st">'iam.RDS'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Es importante que lo salvéis, porque lo cargaremos en la siguiente sesión. Así no tendremos que volver a generar todas las funciones de nuevo.</p>
 

@@ -111,9 +111,6 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-Recuerda siempre cómo *"piensa"* R.
-
-![Cómo piensa R](pics/como_piensa_R.png)
 
 # Introducción a R+RStudio.
 
@@ -135,7 +132,7 @@ Por otro lado, sería extraño realizar un análisis para no comunicarlo, por lo
 
 #### Ventajas:
 
--   Código vs. ventanas. (En realidad en SPSS, Stata, SAS también se hacer todo utilizando código)
+-   Código vs. ventanas. (En realidad,  SPSS, Stata, SAS... también se pueden utilizar usando código)
 -   Reproducibilidad (interna y externa).
 -   Replicabilidad.
 -   Velocidad.
@@ -156,11 +153,10 @@ Instalar R desde aquí: <https://cran.r-project.org/> Instalar RStudio Desktop d
 
 Para detalles sobre la instalación y otros aspectos básicos, [este recurso](https://anabelforte.com/2022/11/20/empezando-en-r-con-rstudio/) creado por Anabel Forte Deltell (más conocida como BayesAna) [![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/AnaBayes.svg?style=social&label=Follow%20%40AnaBayes)](https://twitter.com/AnaBayes) es un buen punto de arranque.
 
-### Visión global en RStudio.
+### Conceptos básicos para comenzar a trabajar con R en RStudio.
 
 ![Paneles en RStudio](pics/panelesRstudio.png){width="200%"}
 
-#### Conceptos básicos para comenzar a trabajar.
 
 -   Workspace, directorio de trabajo , Imagen (.RData).
 -   Paneles: Console, Script,Environment/History/Connection/Tutorial .
@@ -178,16 +174,7 @@ Para detalles sobre la instalación y otros aspectos básicos, [este recurso](ht
 
 ![Cómo piensa R](pics/como_piensa_R.png)
 
-#### Workspace, directorio de trabajo , Imagen (.RData).
 
--   Paneles: Console, Script,Environment/History/Connection/Tutorial .
--   Métodos abreviados de teclado. Ctrl+Intro, Ctrl+Shift+C, Ctrl+Shift+N...
--   Cómo instalar bibliotecas (library).
--   Cómo abrir o llamar a una biblioteca: require(), library()
--   Cómo llamar a las funciones de una biblioteca.
--   Recordar que la posición es relevante al introducir argumentos.
--   Organización del script: Comentar, Outline, ejecución de líneas.
--   Cómo pedir ayuda en Rstudio y en internet.
 
 ############## 
 
@@ -213,10 +200,13 @@ Cómo consultar la ayuda de R:
 Cuando explico este tema, suelo utilizar el ejemplo que sugieren los nombres que vamos a utilizar, solo que en otro contexto.
 
 Instalar la librería (*install.packages('library_name')*) significa ir a la tienda y comprar la biblioteca (library) con los libros incluidos.
+
 Cargarla (*library(library_name)*) o llamarla (*require(library_name)*) sería equivalente a abrir la librería y ponerla a disposición del usuario.
+
 Llamar a una de las funciones que contiene sería equivalente a utilizar uno de los libros (*function_name(args,...)*), libro que puedo usar de muchas formas, siempre que conozca los los *argumentos* para poder hacerlo de la forma que yo deseo.
 
->Nota: 
+>Nota:
+
   * Aunque no son exactamente lo mismo, escuchará library, biblioteca o paquete para referirse a estas bibliotecas (traducción al español de library). 
   * Para utilizar las funciones anteriores, deberá sustituir *library_name* por el nombre de la biblioteca (*library*) que corresponda, y *function_name* por la función de dicha librería que desee utilizar.
   

@@ -748,3 +748,4 @@ En la siguiente sesión veremos cómo importar datos para construir un dataframe
 [^8]: Como podéis ver, sin comprender algunos conceptos como qué es un objeto, qué es un vector o qué es lo que llama environment (entorno) es difícil entender la ayuda, de ahí parte de la utilidad de enseñar esto antes de enseñar *modern R*
 
 [^9]: No os fiéis del color porque depende del fondo que utilicéis en las opciones de RStudio
+
